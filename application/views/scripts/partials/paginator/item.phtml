@@ -1,0 +1,65 @@
+<?php 
+    if(APPLICATION_ENV=='development') {
+        $baseUrl = $this->baseUrl();
+    }elseif(APPLICATION_ENV=='production') {
+        $baseUrl = 'http://www.turisdays.com';
+    }
+?>
+
+<?php //foreach($this->ads as $ad) : ?>
+    <article class="room_list">
+        <div class="row row-flex">
+            <div class="col-lg-4 col-md-5 col-sm-12">
+                <?php $file = (empty($this->file_home))?$this->file_name:$this->file_home; ?>
+                <figure>
+                    <a title="<?= $this->titulo_enlace; ?>" href="<?= $baseUrl . '/hotel/' . $this->url; ?>" class="hover_effect h_link h_blue">
+                        <img title="<?= $this->titulo_imagen; ?>" src="<?= $baseUrl . '/ads/hoteles/58/'. $this->id . '/home/' . $file; ?>" class="img-responsive" alt="<?= $ad['alt_imagen']; ?>">
+                    </a>
+                </figure>
+            </div>
+            <div class="col-lg-8 col-md-7 col-sm-12">
+                <div class="room_details row-flex">
+                    
+                    <div class="col-md-9 col-sm-9 col-xs-12 room_desc">
+                        
+                        <h3><a title="<?= $ad['titulo_enlace']; ?>"  href="<?= $baseUrl . '/hotel/' . $ad["url"]; ?>"> <?= $this->titulo_anuncio; ?> </a></h3>
+                        <p>
+                            <a title="<?= $this->titulo_enlace; ?>"  href="<?= $baseUrl . '/hotel/' . $ad["url"]; ?>"> <?= $this->localidad . ' - ' . $this->provincia; ?> </a>
+                        </p>
+                        <p>
+                            <?= Application_Model_System_Util::myTruncate($this->contenido_seo, 140, " ", " ... ");  ?>
+                            <a title="<?= $ad['titulo_enlace']; ?>"  href="<?= $baseUrl . '/hotel/' . $ad["url"]; ?>"> ¡Leer más! </a>
+                        </p>
+                        <div>
+                            <a title="<?= $ad['titulo_enlace']; ?>" href="<?= $baseUrl . '/hotel/' . $ad["url"]; ?>" class="button  btn_blue upper" style="width:96%;">
+                                <?= '¡'. $this->titulo_oferta . '!'; ?>
+                            </a>
+                        </div>
+                        <div class="room_services">
+                            <?php $counter = 0; ?>
+                            <?php foreach($this->serviceicons as $key => $service) : ?>
+                                <?php if($service===1 && $counter <7) : ?>
+                                    <a title="<?= $this->titulo_enlace; ?>" href="<?= $baseUrl . '/hotel/' . $this->url; ?>">    
+                                        <i class="fa <?= $key; ?>" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="<?= $this->messageicons[$key]; ?>" data-original-title="Servicio"></i> 
+                                    </a>
+                                    <?php $counter++; ?>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                        </div>
+                        
+                    </div>
+
+                    <div class="col-md-3 col-sm-3 col-xs-12 room_price">
+                        <div class="room_price_inner">
+                        <span class="room_price_number"> €<?= number_format($this->precio,0); ?> </span>
+                        <small class="upper"> por noche </small>
+                        <a href="<?= $baseUrl . '/booking-form/' . $this->url; ?>" class="button  btn_blue btn_full upper">Reservar!</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+         </div>
+    </article>
+<?php //endforeach; ?>
+      

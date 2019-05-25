@@ -1,0 +1,2311 @@
+<style type="text/css">
+    .room_list .room_price .button {
+        margin-top: 10px;
+    }
+    .room_list .room_price .room_price_inner {
+        padding-top: 0px; 
+        padding-bottom: 10px;
+    }
+</style>
+
+
+<?php if(!$this->isAdministrador) : ?>
+<div id="classic_slider_euler" class="rev_slider" style="display:none">
+    <ul>
+        <!-- SLIDE NR. 1 -->
+        <li data-transition="crossfade">
+            <!-- MAIN IMAGE -->
+            <img src="images/slider/slider-1.jpg" 
+                 alt="Image" 
+                 title="slider_bg2"
+                 data-bgposition="center center" 
+                 data-bgfit="cover" 
+                 data-bgrepeat="no-repeat" 
+                 data-bgparallax="10" 
+                 class="rev-slidebg" 
+                 data-no-retina="">
+            <!-- LAYER NR. experimento -->
+            <div class="tp-caption tp-resizeme"
+                 data-x="center" 
+                 data-hoffset="" 
+                 data-y="40" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['60','50','40','40']" 
+                 data-lineheight="['60','50','40','30']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 5; color: #fff; font-weight: 900;"> VIAJA CON&nbsp;<?= $this->nombre . ' por ' . $this->place1; ?></div>
+            
+<!--            <div class="tp-caption tp-resizeme"
+                 data-x="40" 
+                 data-hoffset="" 
+                 data-y="80" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['24','50','40','30']" 
+                 data-lineheight="['60','50','40','30']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 5; color: #fff; font-weight: 900;"> Alojamiento Hotel
+            </div>-->
+           
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl() . '/listados'; ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="80" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['24','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Alojamiento Hotel
+            </a>     
+            
+<!--            <div class="tp-caption tp-resizeme"
+                 data-x="40" 
+                 data-hoffset="" 
+                 data-y="115" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['24','50','40','30']" 
+                 data-lineheight="['60','50','40','30']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 5; color: #fff; font-weight: 900;"> Turismo Rural </div>-->
+
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl(); ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="115" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['24','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Turismo Rural
+            </a>     
+
+                 
+                 
+<!--            <div class="tp-caption tp-resizeme"
+                 data-x="40" 
+                 data-hoffset="" 
+                 data-y="150" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['24','50','40','30']" 
+                 data-lineheight="['60','50','40','30']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 5; color: #fff; font-weight: 900;"> Apartamentos </div>-->
+                 
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl(); ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="150" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['24','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Apartamentos
+            </a>     
+                 
+
+
+                 
+                 
+<!--            <div class="tp-caption tp-resizeme"
+                 data-x="40" 
+                 data-hoffset="" 
+                 data-y="185" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['24','50','40','30']" 
+                 data-lineheight="['60','50','40','30']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 5; color: #fff; font-weight: 900;"> Alojamiento Privado </div>-->
+
+            <?php if(!empty($this->section1)) : ?>
+            <div class="tp-caption tp-resizeme"
+                 data-x="center" 
+                 data-hoffset="" 
+                 data-y="140" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['40','50','40','40']" 
+                 data-lineheight="['60','50','40','30']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":2000,"speed":2500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 5; color: #fff; font-weight: 900;"> <?= strtoupper($this->section1); ?></div>
+            <?php endif ?>
+
+            <?php if(!empty($this->section2)) : ?>
+            <div class="tp-caption tp-resizeme"
+                 data-x="center" 
+                 data-hoffset="" 
+                 data-y="200" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['40','50','40','40']" 
+                 data-lineheight="['60','50','40','30']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":3000,"speed":5000,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 5; color: #fff; font-weight: 900;"> <?= strtoupper($this->section2); ?></div>
+            <?php endif ?>
+
+            <?php if(!empty($this->section3)) : ?>
+            <div class="tp-caption tp-resizeme"
+                 data-x="center" 
+                 data-hoffset="" 
+                 data-y="260" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['40','50','40','40']" 
+                 data-lineheight="['60','50','40','30']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":4000,"speed":7500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 5; color: #fff; font-weight: 900;"> <?= strtoupper($this->section3); ?></div>
+            <?php endif ?>
+            
+<!--            <div class="tp-caption tp-resizeme"
+                 data-x="40" 
+                 data-hoffset="" 
+                 data-y="185"
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['24','50','40','30']" 
+                 data-lineheight="['60','50','40','30']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 5; color: #fff; font-weight: 900;"> Alojamiento Residencial </div>-->
+                 
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl(); ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="185" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['24','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Alojamiento Residencial
+            </a>     
+                 
+                 
+                 
+                 
+<!--            <div class="tp-caption tp-resizeme"
+                 data-x="40" 
+                 data-hoffset="" 
+                 data-y="220" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['24','50','40','30']" 
+                 data-lineheight="['60','50','40','30']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 5; color: #fff; font-weight: 900;"> Cruceros </div>-->
+                 
+                 
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl(); ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="220" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['24','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Cruceros
+            </a>     
+                 
+<!--            <div class="tp-caption tp-resizeme"
+                 data-x="40" 
+                 data-hoffset="" 
+                 data-y="255" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['24','50','40','30']" 
+                 data-lineheight="['60','50','40','30']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 5; color: #fff; font-weight: 900;"> Vuelos </div>-->
+                 
+
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl(); ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="255" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['24','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Vuelos
+            </a>     
+                 
+                 
+                 
+                 
+<!--            <div class="tp-caption tp-resizeme"
+                 data-x="40" 
+                 data-hoffset="" 
+                 data-y="290" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['24','50','40','30']" 
+                 data-lineheight="['60','50','40','30']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 5; color: #fff; font-weight: 900;"> Paquetes </div>-->
+                 
+                 
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl(); ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="290" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['24','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Paquetes
+            </a>     
+                 
+                 
+<!--            <div class="tp-caption tp-resizeme"
+                 data-x="40" 
+                 data-hoffset="" 
+                 data-y="325"
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['24','50','40','30']" 
+                 data-lineheight="['60','50','40','30']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 5; color: #fff; font-weight: 900;"> Playas </div>-->
+                 
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl(); ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="325" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['22','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Playas
+            </a>     
+
+                 
+                 
+                 
+                 
+            <!-- LAYER NR. 1 -->
+            <div class="tp-caption tp-resizeme"
+                 data-x="center" 
+                 data-hoffset="" 
+                 data-y="395" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['50','50','40','20']" 
+                 data-lineheight="['60','50','40','30']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 5; color: #fff; font-weight: 900;">DISFRUTA DE TUS VACACIONES!</div>
+
+            <!-- LAYER NR. 2 -->
+<!--            <div class="tp-caption tp-resizeme" 
+                 data-x="center" 
+                 data-hoffset="" 
+                 data-y="410" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="16" 
+                 data-lineheight="16"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 6; color: #fff;"> 2 MENSAJE</div>-->
+            <!-- LAYER NR. 3 -->
+<!--            <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme"
+                 data-x="center" 
+                 data-hoffset="-170" 
+                 data-y="414"
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-width="['100']" 
+                 data-height="['4']"
+                 data-transform_idle="o:1;"
+                 data-transform_in="x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;" 
+                 data-transform_out="opacity:0;s:500;" 
+                 data-mask_in="x:[-100%];y:0;s:inherit;e:inherit;" 
+                 data-start="2000"
+                 style="z-index: 7;background: url(images/icons/wave_white.svg);"> 
+            </div>-->
+            <!-- LAYER NR. 4 -->
+<!--            <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" 
+                 data-x="center"
+                 data-hoffset="-170" 
+                 data-y="418" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-width="['100']" 
+                 data-height="['4']" 
+                 data-transform_idle="o:1;"
+                 data-transform_in="x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;" 
+                 data-transform_out="opacity:0;s:500;"
+                 data-mask_in="x:[-100%];y:0;s:inherit;e:inherit;"
+                 data-start="2100"
+                 style="z-index: 7;background: url(images/icons/wave_white.svg);"> </div>-->
+            <!-- LAYER NR. 5 -->
+<!--            <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme"
+                 data-x="center" 
+                 data-hoffset="170"
+                 data-y="414"
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-width="['100']" 
+                 data-height="['4']" 
+                 data-transform_idle="o:1;" 
+                 data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;" 
+                 data-transform_out="opacity:0;s:500;"
+                 data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" 
+                 data-start="2000" 
+                 style="z-index: 7;background: url(images/icons/wave_white.svg);"> </div>-->
+            <!-- LAYER NR. 6 -->
+<!--            <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme"  
+                 data-x="center"
+                 data-hoffset="170" 
+                 data-y="418" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-width="['100']" 
+                 data-height="['4']" 
+                 data-transform_idle="o:1;"
+                 data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;" 
+                 data-transform_out="opacity:0;s:500;" 
+                 data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" 
+                 data-start="2100"
+                 style="z-index: 7;background: url(images/icons/wave_white.svg);"> </div>-->
+           <!-- LAYER NR. 7 -->
+<!--           <a class="tp-caption button btn_blue" 
+              href="<?php echo $this->baseUrl() . '/booking-form/'; ?>"
+              data-x="center"
+              data-hoffset="-100"
+              data-y="480" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="14"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":2400,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 11;"><i class="fa fa-calendar"></i>BOOK A ROOM NOW
+            </a>-->
+           <!-- LAYER NR. 8 -->
+<!--           <a class="tp-caption button btn_yellow " 
+              href="<?php echo $this->baseUrl( ) . '/contact-us/'; ?>"
+              data-x="center" 
+              data-hoffset="108"
+              data-y="480" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="14"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":2400,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 11;"><i class="fa fa-envelope-o" aria-hidden="true"></i>CONTACT US NOW
+            </a>-->
+            <!-- LAYER NR. 9 -->
+<!--            <div class="tp-caption tp_m_title tp-resizeme" 
+                 data-x="center" 
+                 data-hoffset="" 
+                 data-y="200"
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['18','18','16','16']"
+                 data-lineheight="['18','18','16','16']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":1800,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i> </div>-->
+            <!-- LAYER NR. 10 -->
+<!--            <div class="tp-caption tp_m_title tp-resizeme"
+                 data-x="center"
+                 data-hoffset="" 
+                 data-y="240" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['25','25','18','18']" 
+                 data-lineheight="['25','25','18','18']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":1800,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
+                3 MENSAJE
+            </div>--> </li>
+            <!-- SLIDE NR. 2 -->
+            <li data-transition="crossfade">
+                <!-- MAIN IMAGE -->
+                <img src="images/slider/slider-2.jpg" 
+                     alt="Image" 
+                     title="slider_bg2"
+                     data-bgposition="center center"
+                     data-bgfit="cover" 
+                     data-bgrepeat="no-repeat"
+                     data-bgparallax="10"
+                     class="rev-slidebg" 
+                     data-no-retina="">
+
+            <!-- LAYER NR. experimento -->
+            <div class="tp-caption tp-resizeme"
+                 data-x="center" 
+                 data-hoffset="" 
+                 data-y="40" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['60','50','40','40']" 
+                 data-lineheight="['60','50','40','30']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 5; color: #fff; font-weight: 900;"> VIAJA CON&nbsp;<?= $this->nombre . ' por ' . $this->place2; ?></div>
+            
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl() . '/listados'; ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="80" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['24','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Alojamiento Hotel
+            </a>     
+
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl(); ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="115" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['24','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Turismo Rural
+            </a>     
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl(); ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="150" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['24','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Apartamentos
+            </a>     
+
+            <?php if(!empty($this->section1)) : ?>
+            <div class="tp-caption tp-resizeme"
+                 data-x="center" 
+                 data-hoffset="" 
+                 data-y="140" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['40','50','40','40']" 
+                 data-lineheight="['60','50','40','30']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":2000,"speed":2500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 5; color: #fff; font-weight: 900;"> <?= strtoupper($this->section1); ?></div>
+            <?php endif ?>
+
+            <?php if(!empty($this->section2)) : ?>
+            <div class="tp-caption tp-resizeme"
+                 data-x="center" 
+                 data-hoffset="" 
+                 data-y="200" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['40','50','40','40']" 
+                 data-lineheight="['60','50','40','30']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":3000,"speed":5000,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 5; color: #fff; font-weight: 900;"> <?= strtoupper($this->section2); ?></div>
+            <?php endif ?>
+
+            <?php if(!empty($this->section3)) : ?>
+            <div class="tp-caption tp-resizeme"
+                 data-x="center" 
+                 data-hoffset="" 
+                 data-y="260" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['40','50','40','40']" 
+                 data-lineheight="['60','50','40','30']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":4000,"speed":7500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 5; color: #fff; font-weight: 900;"> <?= strtoupper($this->section3); ?></div>
+            <?php endif ?>
+
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl(); ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="185" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['24','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Alojamiento Residencial
+            </a>     
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl(); ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="220" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['24','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Cruceros
+            </a>     
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl(); ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="255" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['24','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Vuelos
+            </a>     
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl(); ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="290" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['24','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Paquetes
+            </a>     
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl(); ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="325" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['22','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Playas
+            </a>     
+            <!-- LAYER NR. 1 -->
+            <div class="tp-caption tp-resizeme"
+                 data-x="center" 
+                 data-hoffset="" 
+                 data-y="395" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['50','50','40','20']" 
+                 data-lineheight="['60','50','40','30']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 5; color: #fff; font-weight: 900;">DISFRUTA DE TUS VACACIONES!</div>
+                
+                
+                
+                
+                
+                
+                
+            <!-- LAYER NR. 1 -->
+<!--            <div class="tp-caption tp-resizeme" 
+                 data-x="center" 
+                 data-hoffset="" 
+                 data-y="320" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['60','50','40','25']" 
+                 data-lineheight="['60','50','40','25']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 5; color: #fff; font-weight: 900;"> MENSAJE 1 </div>-->
+            <!-- LAYER NR. 2 -->
+<!--            <div class="tp-caption tp-resizeme"
+                 data-x="center" 
+                 data-hoffset="" 
+                 data-y="410" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="16" 
+                 data-lineheight="16"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 6; color: #fff;"> MENSAJE 2 </div>-->
+            <!-- LAYER NR. 3 -->
+<!--            <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" 
+                 data-x="center" 
+                 data-hoffset="-134" 
+                 data-y="414"
+                 data-voffset=""
+                 data-width="['100']" 
+                 data-height="['4']"
+                 data-transform_idle="o:1;" 
+                 data-transform_in="x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;"
+                 data-transform_out="opacity:0;s:300;" 
+                 data-mask_in="x:[-100%];y:0;s:inherit;e:inherit;" 
+                 data-start="2000" 
+                 data-responsive_offset="on"
+                 style="z-index: 7;background: url(images/icons/wave_white.svg);"> </div>-->
+            <!-- LAYER NR. 4 -->
+<!--            <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" 
+                 data-x="center" 
+                 data-hoffset="-134"
+                 data-y="418"
+                 data-voffset=""
+                 data-width="['100']" 
+                 data-height="['4']" 
+                 data-transform_idle="o:1;" 
+                 data-transform_in="x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;"
+                 data-transform_out="opacity:0;s:300;" 
+                 data-mask_in="x:[-100%];y:0;s:inherit;e:inherit;"
+                 data-start="2100" 
+                 data-responsive_offset="on" 
+                 style="z-index: 8;background: url(images/icons/wave_white.svg);"> </div>-->
+            <!-- LAYER NR. 5 -->
+<!--            <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" 
+                 data-x="center" 
+                 data-hoffset="134" 
+                 data-y="414"
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-width="['100']"
+                 data-height="['4']" 
+                 data-transform_idle="o:1;" 
+                 data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;"
+                 data-transform_out="opacity:0;s:300;" 
+                 data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" 
+                 data-start="2000" 
+                 style="z-index: 9;background: url(images/icons/wave_white.svg);"> </div>-->
+            <!-- LAYER NR. 6 -->
+<!--            <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" 
+                 data-x="center"
+                 data-hoffset="134"
+                 data-y="418" 
+                 data-voffset=""
+                 data-width="['100']"
+                 data-height="['4']"
+                 data-transform_idle="o:1;" 
+                 data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;"
+                 data-transform_out="opacity:0;s:300;" 
+                 data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" 
+                 data-start="2100" 
+                 data-responsive_offset="on" 
+                 style="z-index: 10;background: url(images/icons/wave_white.svg);"> </div>-->
+           <!-- LAYER NR. 7 -->
+<!--           <a class="tp-caption button btn_yellow" 
+              href="booking-form.html"
+              data-x="center" 
+              data-hoffset="-100"
+              data-y="480"
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="14" 
+              data-whitespace="nowrap"
+              data-frames='[{"delay":2400,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 11;"><i class="fa fa-calendar"></i>BOOK A ROOM NOW</a>  -->
+            <!-- LAYER NR. 8 -->
+<!--            <a class="tp-caption button btn_yellow "
+               href="contact.html"
+               data-x="center" 
+               data-hoffset="108"
+               data-y="480" 
+               data-voffset=""
+               data-responsive_offset="on" 
+               data-fontsize="14" 
+               data-frames='[{"delay":2400,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+               style="z-index: 11;"><i class="fa fa-envelope-o" aria-hidden="true"></i>CONTACT US NOW </a>-->
+            <!-- LAYER NR. 9 -->
+<!--            <div class="tp-caption tp-resizeme" 
+                 data-x="center" 
+                 data-hoffset="" 
+                 data-y="200"
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-frames='[{"delay":1800,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 12;"><img src="images/logo_light.svg" width="200" alt="Image">
+            </div>-->
+        </li>
+                    
+                    <!-- SLIDE NR. 3 -->
+                    <li data-transition="crossfade">
+                        <!-- MAIN IMAGE -->
+                        <img src="images/slider/slider-3.jpg" 
+                             alt="Image" 
+                             title="slider_bg3"
+                             data-bgposition="center center"
+                             data-bgfit="cover" 
+                             data-bgrepeat="no-repeat"
+                             data-bgparallax="10" 
+                             class="rev-slidebg"
+                             data-no-retina="">
+                        
+            <!-- LAYER NR. experimento -->
+            <div class="tp-caption tp-resizeme"
+                 data-x="center" 
+                 data-hoffset="" 
+                 data-y="40" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['60','50','40','40']" 
+                 data-lineheight="['60','50','40','30']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 5; color: #fff; font-weight: 900;"> VIAJA CON&nbsp;<?= $this->nombre . ' por ' . $this->place3; ?></div>
+
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl() . '/listados'; ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="80" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['24','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Alojamiento Hotel
+            </a>     
+
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl(); ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="115" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['24','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Turismo Rural
+            </a>     
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl(); ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="150" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['24','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Apartamentos
+            </a>                      
+            <?php if(!empty($this->section1)) : ?>
+            <div class="tp-caption tp-resizeme"
+                 data-x="center" 
+                 data-hoffset="" 
+                 data-y="140" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['40','50','40','40']" 
+                 data-lineheight="['60','50','40','30']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":2000,"speed":2500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 5; color: #fff; font-weight: 900;"> <?= strtoupper($this->section1); ?></div>
+            <?php endif ?>
+            
+            <?php if(!empty($this->section2)) : ?>
+            <div class="tp-caption tp-resizeme"
+                 data-x="center" 
+                 data-hoffset="" 
+                 data-y="200" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['40','50','40','40']" 
+                 data-lineheight="['60','50','40','30']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":3000,"speed":5000,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 5; color: #fff; font-weight: 900;"> <?= strtoupper($this->section2); ?></div>
+            <?php endif ?>
+
+            <?php if(!empty($this->section3)) : ?>
+            <div class="tp-caption tp-resizeme"
+                 data-x="center" 
+                 data-hoffset="" 
+                 data-y="260" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['40','50','40','40']" 
+                 data-lineheight="['60','50','40','30']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":4000,"speed":7500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 5; color: #fff; font-weight: 900;"> <?= strtoupper($this->section3); ?></div>
+            <?php endif ?>
+                 
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl(); ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="185" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['24','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Alojamiento Residencial
+            </a>     
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl(); ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="220" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['24','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Cruceros
+            </a>     
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl(); ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="255" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['24','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Vuelos
+            </a>     
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl(); ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="290" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['24','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Paquetes
+            </a>     
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl(); ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="325" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['22','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Playas
+            </a>     
+            <!-- LAYER NR. 1 -->
+            <div class="tp-caption tp-resizeme"
+                 data-x="center" 
+                 data-hoffset="" 
+                 data-y="395" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['50','50','40','20']" 
+                 data-lineheight="['60','50','40','30']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 5; color: #fff; font-weight: 900;">DISFRUTA DE TUS VACACIONES!</div>
+                        
+                        
+                        
+                        <!-- LAYER NR. 1 -->
+<!--                        <div class="tp-caption tp-resizeme" 
+                             data-x="center" 
+                             data-hoffset="" 
+                             data-y="305" 
+                             data-voffset=""
+                             data-responsive_offset="on" 
+                             data-fontsize="['80','70','60','40']" 
+                             data-lineheight="['80','70','60','40']"
+                             data-whitespace="nowrap"
+                             data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                             style="z-index: 5; color: #fff; font-weight: 900;"> MENSAJE 1
+                        </div>-->
+                        <!-- LAYER NR. 2 -->
+<!--                        <div class="tp-caption tp-resizeme" 
+                             data-x="center" 
+                             data-hoffset=""
+                             data-y="410"
+                             data-voffset=""
+                             data-responsive_offset="on" 
+                             data-fontsize="16" 
+                             data-lineheight="16"
+                             data-whitespace="nowrap"
+                             data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                             style="z-index: 6; color: #fff;"> MENSAJE 2
+                        </div>-->
+                        <!-- LAYER NR. 3 -->
+<!--                        <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" 
+                             data-x="center" 
+                             data-hoffset="-180" 
+                             data-y="414" 
+                             data-voffset=""
+                             data-width="['100']" 
+                             data-height="['4']" 
+                             data-transform_idle="o:1;" 
+                             data-transform_in="x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1000;e:Power3.easeOut;" 
+                             data-transform_out="opacity:0;s:300;" 
+                             data-mask_in="x:[-100%];y:0;s:inherit;e:inherit;"
+                             data-start="2300" 
+                             data-responsive_offset="on" 
+                             style="z-index: 7;background: url(images/icons/wave_white.svg);"> 
+                        </div>-->
+                        <!-- LAYER NR. 4 -->
+<!--                        <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" 
+                             data-x="center"
+                             data-hoffset="-180" 
+                             data-y="418" 
+                             data-voffset=""
+                             data-width="['100']" 
+                             data-height="['4']" 
+                             data-transform_idle="o:1;" 
+                             data-transform_in="x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1000;e:Power3.easeOut;" 
+                             data-transform_out="opacity:0;s:300;"
+                             data-mask_in="x:[-100%];y:0;s:inherit;e:inherit;" 
+                             data-start="2400" 
+                             data-responsive_offset="on" 
+                             style="z-index: 8;background: url(images/icons/wave_white.svg);"> 
+                        </div>-->
+                        <!-- LAYER NR. 5 -->
+<!--                        <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" 
+                             data-x="center"
+                             data-hoffset="180"
+                             data-y="414" 
+                             data-voffset=""
+                             data-width="['100']"
+                             data-height="['4']" 
+                             data-transform_idle="o:1;" 
+                             data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1000;e:Power3.easeOut;" 
+                             data-transform_out="opacity:0;s:300;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" 
+                             data-start="2300" 
+                             data-responsive_offset="on" 
+                             style="z-index: 9;background: url(images/icons/wave_white.svg);">
+                        </div>-->
+                        <!-- LAYER NR. 6 -->
+<!--                        <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" 
+                             data-x="center" 
+                             data-hoffset="180"
+                             data-y="418" 
+                             data-voffset=""
+                             data-width="['100']" 
+                             data-height="['4']" 
+                             data-transform_idle="o:1;" 
+                             data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1000;e:Power3.easeOut;" 
+                             data-transform_out="opacity:0;s:300;" 
+                             data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" 
+                             data-start="2400" 
+                             data-responsive_offset="on" 
+                             style="z-index: 10;background: url(images/icons/wave_white.svg);"> 
+                        </div>-->
+                    </li>
+                    
+                    
+                    <!-- SLIDE NR. 4 -->
+                    <li data-transition="crossfade">
+                        <!-- MAIN IMAGE -->
+                        <img src="images/slider/slider-4.jpg" 
+                             alt="Image" 
+                             title="slider_bg3"
+                             data-bgposition="center center"
+                             data-bgfit="cover" 
+                             data-bgrepeat="no-repeat"
+                             data-bgparallax="10" 
+                             class="rev-slidebg"
+                             data-no-retina="">
+                        
+            <!-- LAYER NR. experimento -->
+            <div class="tp-caption tp-resizeme"
+                 data-x="center" 
+                 data-hoffset="" 
+                 data-y="40" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['60','50','40','40']" 
+                 data-lineheight="['60','50','40','30']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 5; color: #fff; font-weight: 900;"> VIAJA CON&nbsp;<?= $this->nombre . ' por ' . $this->place4; ?> </div>
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl() . '/listados'; ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="80" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['24','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Alojamiento Hotel
+            </a>     
+
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl(); ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="115" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['24','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Turismo Rural
+            </a>     
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl(); ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="150" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['24','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Apartamentos
+            </a>
+            <?php if(!empty($this->section1)) : ?>
+            <div class="tp-caption tp-resizeme"
+                 data-x="center" 
+                 data-hoffset="" 
+                 data-y="140" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['40','50','40','40']" 
+                 data-lineheight="['60','50','40','30']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":2000,"speed":2500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 5; color: #fff; font-weight: 900;"> <?= strtoupper($this->section1); ?></div>
+            <?php endif ?>
+            
+            <?php if(!empty($this->section2)) : ?>
+            <div class="tp-caption tp-resizeme"
+                 data-x="center" 
+                 data-hoffset="" 
+                 data-y="200" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['40','50','40','40']" 
+                 data-lineheight="['60','50','40','30']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":3000,"speed":5000,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 5; color: #fff; font-weight: 900;"> <?= strtoupper($this->section2); ?></div>
+            <?php endif ?>
+
+            <?php if(!empty($this->section3)) : ?>
+            <div class="tp-caption tp-resizeme"
+                 data-x="center" 
+                 data-hoffset="" 
+                 data-y="260" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['40','50','40','40']" 
+                 data-lineheight="['60','50','40','30']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":4000,"speed":7500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 5; color: #fff; font-weight: 900;"> <?= strtoupper($this->section3); ?></div>
+            <?php endif ?>
+
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl(); ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="185" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['24','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Alojamiento Residencial
+            </a>     
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl(); ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="220" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['24','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Cruceros
+            </a>     
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl(); ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="255" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['24','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Vuelos
+            </a>     
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl(); ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="290" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['24','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Paquetes
+            </a>     
+            <a class="tp-caption" 
+              href="<?php echo $this->baseUrl(); ?>"
+              data-x="40" 
+              data-hoffset=""
+              data-y="325" 
+              data-voffset=""
+              data-responsive_offset="on" 
+              data-fontsize="['22','50','40','30']"
+              data-lineheight="['60','50','40','30']"
+              data-whitespace="nowrap"
+              data-frames='[{"delay":1200,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+              style="z-index: 5; color: #fff; font-weight: 900;">Playas
+            </a>     
+            <!-- LAYER NR. 1 -->
+            <div class="tp-caption tp-resizeme"
+                 data-x="center" 
+                 data-hoffset="" 
+                 data-y="395" 
+                 data-voffset=""
+                 data-responsive_offset="on" 
+                 data-fontsize="['50','50','40','20']" 
+                 data-lineheight="['60','50','40','30']"
+                 data-whitespace="nowrap"
+                 data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                 style="z-index: 5; color: #fff; font-weight: 900;">DISFRUTA DE TUS VACACIONES!</div>
+                        
+                        
+                        
+                        <!-- LAYER NR. 1 -->
+                        <!-- leves [DESKTOP, LAPTOP, TABLET, SMARTPHONE] -->
+<!--                        <div class="tp-caption tp-resizeme" 
+                             data-x="center" 
+                             data-hoffset="" 
+                             data-y="305" 
+                             data-voffset=""
+                             data-responsive_offset="on" 
+                             data-fontsize="['60','70','60','40']"  
+                             data-lineheight="['80','70','60','40']"
+                             data-whitespace="nowrap"
+                             data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                             style="z-index: 5; color: #fff; font-weight: 900;"> DISFRUTA DE TUS VACACIONES
+                        </div>-->
+                        
+                        <!-- LAYER NR. 2 -->
+<!--                        <div class="tp-caption tp-resizeme" 
+                             data-x="center" 
+                             data-hoffset=""
+                             data-y="410"
+                             data-voffset=""
+                             data-responsive_offset="on" 
+                             data-fontsize="16" 
+                             data-lineheight="16"
+                             data-whitespace="nowrap"
+                             data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                             style="z-index: 6; color: #fff;"> MENSAJE 2
+                        </div>-->
+                        <!-- LAYER NR. 3 -->
+<!--                        <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" 
+                             data-x="center" 
+                             data-hoffset="-180" 
+                             data-y="414" 
+                             data-voffset=""
+                             data-width="['100']" 
+                             data-height="['4']" 
+                             data-transform_idle="o:1;" 
+                             data-transform_in="x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1000;e:Power3.easeOut;" 
+                             data-transform_out="opacity:0;s:300;" 
+                             data-mask_in="x:[-100%];y:0;s:inherit;e:inherit;"
+                             data-start="2300" 
+                             data-responsive_offset="on" 
+                             style="z-index: 7;background: url(images/icons/wave_white.svg);"> 
+                        </div>-->
+                        <!-- LAYER NR. 4 -->
+<!--                        <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" 
+                             data-x="center"
+                             data-hoffset="-180" 
+                             data-y="418" 
+                             data-voffset=""
+                             data-width="['100']" 
+                             data-height="['4']" 
+                             data-transform_idle="o:1;" 
+                             data-transform_in="x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1000;e:Power3.easeOut;" 
+                             data-transform_out="opacity:0;s:300;"
+                             data-mask_in="x:[-100%];y:0;s:inherit;e:inherit;" 
+                             data-start="2400" 
+                             data-responsive_offset="on" 
+                             style="z-index: 8;background: url(images/icons/wave_white.svg);"> 
+                        </div>-->
+                        <!-- LAYER NR. 5 -->
+<!--                        <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" 
+                             data-x="center"
+                             data-hoffset="180"
+                             data-y="414" 
+                             data-voffset=""
+                             data-width="['100']"
+                             data-height="['4']" 
+                             data-transform_idle="o:1;" 
+                             data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1000;e:Power3.easeOut;" 
+                             data-transform_out="opacity:0;s:300;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" 
+                             data-start="2300" 
+                             data-responsive_offset="on" 
+                             style="z-index: 9;background: url(images/icons/wave_white.svg);">
+                        </div>-->
+                        <!-- LAYER NR. 6 -->
+<!--                        <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" 
+                             data-x="center" 
+                             data-hoffset="180"
+                             data-y="418" 
+                             data-voffset=""
+                             data-width="['100']" 
+                             data-height="['4']" 
+                             data-transform_idle="o:1;" 
+                             data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1000;e:Power3.easeOut;" 
+                             data-transform_out="opacity:0;s:300;" 
+                             data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" 
+                             data-start="2400" 
+                             data-responsive_offset="on" 
+                             style="z-index: 10;background: url(images/icons/wave_white.svg);"> 
+                        </div>-->
+                    </li>
+
+                   
+                </ul>
+</div>
+<?php endif; ?>
+
+<div class="hbf">
+<!--                <div class="container">
+                    <div class="inner">
+                        <form id="booking-form">
+
+                            <div class="col-md-2 md_pr5">
+                                <div class="form-group">
+                                    <label>Your Email
+                                        <a href="#" title="Your Email" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Please Type Your Email"> <i class="label_icon_info fa fa-info-circle"></i></a>
+                                    </label>
+                                    <input class="form-control" name="booking-email" type="email" placeholder="Your Email Address">
+                                </div>
+                            </div>
+                            <div class="col-md-2 md_p5">
+                                <div class="form-group">
+                                     <label>Room Type
+                                        <a href="#" title="Room Type" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Please Select Room Type: Single Room, Double Room or Deluxe Room"> <i class="label_icon_info fa fa-info-circle"></i></a>
+                                    </label>
+                                    <div class="form_select">
+                                        <select name="booking-roomtype" class="form-control" title="Select Room Type" data-header="Room Type">
+                                            <option value="Single">Single Room</option>
+                                            <option value="Double">Double Room</option>
+                                            <option value="Deluxe">Deluxe Room</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="row">
+
+                                    <div class="col-md-6 col-sm-6 arrival_date md_pl5 md_nopadding_right">
+                                        <div class="form-group">
+                                            <label>Arrival
+                                                <a href="#" title="Arrival" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Check In from 11:00 am"> <i class="label_icon_info fa fa-info-circle"></i></a>
+                                            </label>
+                                            <div class="form_date">
+                                                <input type="text" class="datepicker form-control md_noborder_right" name="booking-checkin" placeholder="Arrival Date" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-sm-6 departure_date md_pr5 md_nopadding_left">
+                                        <div class="form-group">
+                                            <label>Departure
+                                                <a href="#" title="Departure" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Check Out from 12:00 am"> <i class="label_icon_info fa fa-info-circle"></i></a>
+                                            </label>
+                                            <div class="form_date departure">
+                                                <input type="text" class="datepicker form-control" name="booking-checkout" placeholder="Departure Date" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="row">
+
+                                    <div class="col-md-6 col-sm-6 adults md_pl5 md_nopadding_right">
+                                        <div class="form-group">
+                                            <label>Adults
+                                                <a href="#" title="Adults" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="+18 years"> <i class="label_icon_info fa fa-info-circle"></i></a>
+                                            </label>
+                                            <div class="form_select">
+                                                <select name="booking-adults" class="form-control md_noborder_right" title="Adults" data-header="Adults">
+                                                    <option value="0">0</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 children md_pr5 md_nopadding_left">
+                                        <div class="form-group">
+                                             <label>Children
+                                                <a href="#" title="Children" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="0-18 years"> <i class="label_icon_info fa fa-info-circle"></i></a>
+                                            </label>
+                                            <div class="form_select children_select">
+                                                <select name="booking-children" class="form-control" title="Children" data-header="Children">
+                                                    <option value="0">0</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 md_pl5">
+                                <button type="submit" class="button  btn_blue btn_full">BOOK A ROOM</button>
+                                <div class="advanced_form_link" style="margin-bottom: 20px;"> <a href="<?php echo $this->baseUrl( ) . '/booking-form/'; ?>">Advanced Booking Form</a></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>-->
+</div>
+
+
+<?php if($this->isAdministrador) : ?>
+
+
+
+
+
+<!-- =========== MAIN ========== -->
+<main id="rooms_list">
+    
+    <?php if(count($this->ads)>0) : ?>
+    <div class="page_title gradient_overlay" style="background: url(images/page_title_bg.jpg);">
+        <div class="container">
+            <div class="inner">
+                <h1>Anuncios para validar</h1>
+                <ol class="breadcrumb">
+                    <li><a href="<?php echo $this->baseUrl( ) . '/'; ?>">Home</a></li>
+                    <li>Anuncios para validar</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <?php endif; ?>
+    
+    <div class="container">
+      <!-- ITEM -->
+    <?php if(count($this->ads)>0) : ?>
+      
+        <?php foreach($this->ads as $ad) : ?>
+                <article class="room_list">
+                    <div class="row row-flex">
+                        <div class="col-lg-4 col-md-5 col-sm-12">
+                            <?php $file = (empty($ad["file_home"]))?$ad["file_name"]:$ad["file_home"]; ?>
+                           <figure>
+                               <a href="<?php echo $this->baseUrl() . '/validacion/?id=' . $ad["id"]; ?>" class="hover_effect h_link h_blue">
+                                   <img src="<?= $this->baseUrl() . '/ads/images/57/'. $ad["id"] . '/home/' . $file; ?>" class="img-responsive" alt="Image">
+                               </a>
+                           </figure>
+                        </div>
+                        <div class="col-lg-8 col-md-7 col-sm-12">
+                           <div class="room_details row-flex">
+                              <div class="col-md-9 col-sm-9 col-xs-12 room_desc">
+                                 <h3><a href="<?php echo $this->baseUrl( ) . '/validacion/?id=' . $ad["id"]; ?>"> <?= $ad["title_ad"]; ?> </a></h3>
+                              </div>
+                              <div class="col-md-3 col-sm-3 col-xs-12 room_price">
+                                 <div class="room_price_inner">
+                                    <a href="<?php echo $this->baseUrl() . '/validacion/?id=' . $ad["id"]; ?>" class="button  btn_blue btn_full upper">Validar!</a>
+                                 </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+        <?php endforeach; ?>  
+            
+        <nav class="a_center">
+            <ul class="pagination mt50 mb0">
+                <li class="prev_pagination"><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li class="next_pagination"><a href="#"><i class="fa fa-angle-right"></i></a></li>
+            </ul>
+        </nav>
+      
+    <?php endif; ?>  
+    </div>
+    
+    <?php if((count($this->ads)>0)&&(count($this->adsUpdated)>0)) : ?>  
+    <div style="height: 100px;"></div>
+    <?php endif; ?>  
+    
+    <?php if(count($this->adsUpdated)>0) : ?>
+    
+    <div class="page_title gradient_overlay" style="background: url(images/page_title_bg.jpg);">
+        <div class="container">
+            <div class="inner">
+                <h1>Anuncios para editar</h1>
+                <ol class="breadcrumb">
+                    <li><a href="<?php echo $this->baseUrl( ) . '/'; ?>">Home</a></li>
+                    <li>Anuncios para editar</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    
+    <?php endif; ?>
+
+    <div class="container">
+    <!-- ITEM -->
+    <?php if(count($this->adsUpdated)>0) : ?>
+    
+        <?php foreach($this->adsUpdated as $ad) : ?>
+                <article class="room_list">
+                    <div class="row row-flex">
+                        <div class="col-lg-4 col-md-5 col-sm-12">
+                            <?php $file = (empty($ad["file_home"]))?$ad["file_name"]:$ad["file_home"]; ?>
+                           <figure>
+                               <a href="<?php echo $this->baseUrl() . '/validacion/?id=' . $ad["id"] . '&flag=1'; ?>" class="hover_effect h_link h_blue">
+                                    <img src="<?= $this->baseUrl() . '/ads/images/57/'. $ad["id"] . '/home/' . $file; ?>" class="img-responsive" alt="Image">
+                               </a>
+                           </figure>
+                        </div>
+                        <div class="col-lg-8 col-md-7 col-sm-12">
+                           <div class="room_details row-flex">
+                              <div class="col-md-9 col-sm-9 col-xs-12 room_desc">
+                                 <h3><a href="<?php echo $this->baseUrl( ) . '/validacion/?id=' . $ad["id"] . '&flag=1'; ?>"> <?= $ad["title_ad"]; ?> </a></h3>
+                              </div>
+                              <div class="col-md-6 col-sm-6 col-xs-12 room_price">
+                                 <div class="room_price_inner">
+                                    <a href="<?php echo $this->baseUrl() . '/validacion/?id=' . $ad["id"] . '&flag=1'; ?>" class="button  btn_blue btn_full upper">Editar!</a>
+                                 </div>
+                                 <div class="room_price_inner">
+                                    <a href="<?php echo $this->baseUrl() . '/validacion/change-image/?id=' . $ad["id"]; ?>" class="button  btn_blue btn_full upper">Imagenes!</a>
+                                 </div>
+                                 <div class="room_price_inner">
+                                    <a href="<?php echo $this->baseUrl() . '/validacion/desactivar/?id=' . $ad["id"]; ?>" class="button  btn_blue btn_full upper">Desactivar!</a>
+                                 </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+        <?php endforeach; ?>  
+            
+        <nav class="a_center">
+            <ul class="pagination mt50 mb0">
+                <li class="prev_pagination"><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li class="next_pagination"><a href="#"><i class="fa fa-angle-right"></i></a></li>
+            </ul>
+        </nav>
+    
+    <?php endif; ?>
+    
+    </div>    
+    
+</main>
+
+<?php else : ?>
+
+        <?php foreach($this->sections as $key => $section) : ?>
+        <section class="white_bg" id="rooms">
+            <div class="container">
+                <div class="main_title mt_wave a_center">
+                    <?php if($key == '0'): ?>
+                        <h2> ANUNCIOS FAVORITOS </h2><BR/>
+                    <?php endif; ?>
+                    <h2> <?= strtoupper($section['seccion']); ?> </h2>
+                </div>
+                <div class="row">
+                    <?php 
+                    $contador = 1;
+                    //die('<pre>' . print_r($this->ads, true) . '</pre>');
+                    
+                    foreach($this->ads as $ad) : ?>
+                    <div class="col-md-4">
+                        <?php
+                             if(!empty($ad["file_home"])&&!empty($ad["file_name"]))
+                               $file = $ad["file_home"];
+                             elseif (empty($ad["file_home"])&&!empty($ad["file_name"]))
+                                     $file = $ad["file_name"];
+                             
+                        //$file = (!empty($ad["file_name"]))?$ad["file_name"]:$ad["file_home"]; ?>
+                        <article class="room" style="margin-bottom: 20px;">
+                            <figure>
+                                <a title="<?= $ad['titulo_enlace']; ?>" href="<?php echo $this->baseUrl( ) . '/habitacion/' . $ad["url"]; ; ?>">
+                                    <div class="price">Alojamiento para <?= $ad["persons_number_id"]; ?> personas   <?= number_format($ad["price_ad"],0); ?>€<span>/noche</span></div>
+                                </a>
+                                <a title="<?= $ad['titulo_enlace']; ?>" class="hover_effect h_blue h_link" href="<?php echo $this->baseUrl( ) . '/habitacion/' . $ad["url"]; ?>">
+                                    <img title="<?= $ad['titulo_imagen']; ?>" src="ads/images/57/<?= $ad["id"] . '/home/' . $file; ?>" class="img-responsive" style="height: 240px;" alt="<?= $ad['titulo_alt']; ?>"/>
+                                </a>
+                                <figcaption>
+                                    <h4><a title="<?= $ad['titulo_enlace']; ?>" href="<?php echo $this->baseUrl( ) . '/habitacion/' . $ad["url"]; ; ?>"><?= $ad["title_ad"] ?></a></h4>
+                                    <div class="room_list" style="margin-bottom: 4px;">
+                                        <div class="room_details">
+                                            <div class="room_services" style="padding-top: 1px;">
+                                                <a title="<?= $ad['titulo_enlace']; ?>" href="<?php echo $this->baseUrl( ) . '/habitacion/' . $ad["url"]; ; ?>">
+                                                    <i class="fa fa-coffee" style="padding: 5px 5px; margin: 1px;" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Breakfast Included" data-original-title="Breakfast"></i> 
+                                                </a>
+                                                <a title="<?= $ad['titulo_enlace']; ?>" href="<?php echo $this->baseUrl( ) . '/habitacion/' . $ad["url"]; ; ?>">
+                                                    <i class="fa fa-cutlery" style="padding: 5px 5px; margin: 1px;" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Restaurant" data-original-title="Zante Restaurant"></i>
+                                                </a>
+                                                <a title="<?= $ad['titulo_enlace']; ?>" href="<?php echo $this->baseUrl( ) . '/habitacion/' . $ad["url"]; ; ?>">
+                                                    <i class="fa fa-television" style="padding: 5px 5px; margin: 1px;" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Plasma TV with cable Channel" data-original-title="Plasma TV"></i>
+                                                </a>
+                                                <a title="<?= $ad['titulo_enlace']; ?>" href="<?php echo $this->baseUrl( ) . '/habitacion/' . $ad["url"]; ; ?>">
+                                                    <i class="fa fa-bed" style="padding: 5px 5px; margin: 1px;" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Plasma TV with cable Channel" data-original-title="Plasma TV"></i>
+                                                </a>
+                                                <a title="<?= $ad['titulo_enlace']; ?>" href="<?php echo $this->baseUrl( ) . '/habitacion/' . $ad["url"]; ; ?>">
+                                                    <i class="fa fa-beer" style="padding: 5px 5px; margin: 1px;" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Plasma TV with cable Channel" data-original-title="Plasma TV"></i>
+                                                </a>
+                                                <a title="<?= $ad['titulo_enlace']; ?>" href="<?php echo $this->baseUrl( ) . '/habitacion/' . $ad["url"]; ; ?>">
+                                                    <i class="fa fa-bus" style="padding: 5px 5px; margin: 1px;" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Plasma TV with cable Channel" data-original-title="Plasma TV"></i>
+                                                </a>
+                                                <a title="<?= $ad['titulo_enlace']; ?>" href="<?php echo $this->baseUrl( ) . '/habitacion/' . $ad["url"]; ; ?>">
+                                                    <i class="fa fa-bath" style="padding: 5px 5px; margin: 1px;" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Plasma TV with cable Channel" data-original-title="Plasma TV"></i>
+                                                </a>
+                                                <a title="<?= $ad['titulo_enlace']; ?>" href="<?php echo $this->baseUrl( ) . '/habitacion/' . $ad["url"]; ; ?>">
+                                                    <i class="fa fa-cutlery" style="padding: 5px 5px; margin: 1px;" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Restaurant" data-original-title="Zante Restaurant"></i>
+                                                </a>
+                                            </div>
+                                        </div>    
+                                    </div>
+                                    
+                                    <span class="f_right"><a href="<?php echo $this->baseUrl() . '/habitacion/' . $ad["url"] . '#comments'; ?>" class="button btn_sm btn_blue">VER COMENTARIO</a></span>
+                                </figcaption>
+                                
+                            </figure>
+                        </article>
+                    </div>
+                    <?php if($contador%3==0) : ?>
+                        <div class="col-md-12" style="height: 36px;">
+                        </div>    
+                    <?php endif; ?>
+                    
+                    
+                    <?php 
+                    $contador++;
+                    endforeach; ?>
+                </div>
+<!--                <div class="mt40 a_center">
+                    <a class="button btn_sm btn_yellow" href="<?php echo $this->baseUrl( ) . '/listados/'; ?>"> MÁS ANUNCIOS </a>
+                </div> -->
+            </div>
+        </section>
+        <?php endforeach; ?>
+
+<!--        <section class="white_bg" id="rooms">
+            <div class="container">
+                <div class="main_title mt_wave a_center">
+                    <h2>APARTAMENTOS</h2>
+                </div>
+                <div class="row">
+                    <?php foreach($this->ads as $ad) : ?>
+                    <div class="col-md-4">
+                        <article class="room" style="margin-bottom: 20px;">
+                            <figure>
+                                <div class="price">€<?= number_format($ad["price_ad"],0); ?><span>/ noche</span></div>
+                                <a class="hover_effect h_blue h_link" href="<?php echo $this->baseUrl( ) . '/habitacion/?id=' . $ad["id"]; ?>">
+                                    <img src="ads/images/57/<?= $ad["id"] . '/home/' . $ad['file_name'] ?>" class="img-responsive" alt="Image">
+                                </a>
+                                <figcaption>
+                                    <h4><a href="<?php echo $this->baseUrl( ) . '/habitacion/?id=' . $ad["id"]; ; ?>"><?= $ad["title_ad"] ?></a></h4>
+                                    <span class="f_right"><a href="<?php echo $this->baseUrl() . '/habitacion/?id=' . $ad["id"] . '#comments'; ?>" class="button btn_sm btn_blue">VER COMENTARIO</a></span>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </div>
+                    <?php endforeach; ?>
+                </div>
+                <div class="mt40 a_center">
+                    <a class="button btn_sm btn_yellow" href="<?php echo $this->baseUrl( ) . '/listados/'; ?>"> MÁS ANUNCIOS </a>
+                </div> 
+            </div>
+        </section>-->
+
+
+<!--        <section class="white_bg" id="rooms">
+            <div class="container">
+                <div class="main_title mt_wave a_center">
+                    <h2>ALOJAMIENTO TURÍSTICO</h2>
+                </div>
+                <div class="row">
+                    <?php foreach($this->ads as $ad) : ?>
+                    <div class="col-md-4">
+                        <article class="room" style="margin-bottom: 20px;">
+                            <figure>
+                                <div class="price">€<?= number_format($ad["price_ad"],0); ?><span>/ noche</span></div>
+                                <a class="hover_effect h_blue h_link" href="<?php echo $this->baseUrl( ) . '/habitacion/?id=' . $ad["id"]; ?>">
+                                    <img src="ads/images/57/<?= $ad["id"] . '/home/' . $ad['file_name'] ?>" class="img-responsive" alt="Image">
+                                </a>
+                                <figcaption>
+                                    <h4><a href="<?php echo $this->baseUrl( ) . '/habitacion/?id=' . $ad["id"]; ; ?>"><?= $ad["title_ad"] ?></a></h4>
+                                    <span class="f_right"><a href="<?php echo $this->baseUrl() . '/habitacion/?id=' . $ad["id"] . '#comments'; ?>" class="button btn_sm btn_blue">VER COMENTARIO</a></span>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </div>
+                    <?php endforeach; ?>
+                </div>
+              <div class="mt40 a_center">
+                    <a class="button btn_sm btn_yellow" href="<?php echo $this->baseUrl( ) . '/listados/'; ?>"> MÁS ANUNCIOS </a>
+                </div> 
+            </div>
+        </section>-->
+
+
+<!--        <section class="white_bg" id="rooms">
+            <div class="container">
+                <div class="main_title mt_wave a_center">
+                    <h2>RESERVAS Y ALOJAMIENTOS</h2>
+                </div>
+                <div class="row">
+                    <?php foreach($this->ads as $ad) : ?>
+                    <div class="col-md-4">
+                        <article class="room" style="margin-bottom: 20px;">
+                            <figure>
+                                <div class="price">€<?= number_format($ad["price_ad"],0); ?><span>/ noche</span></div>
+                                <a class="hover_effect h_blue h_link" href="<?php echo $this->baseUrl( ) . '/habitacion/?id=' . $ad["id"]; ?>">
+                                    <img src="ads/images/57/<?= $ad["id"] . '/home/' . $ad['file_name'] ?>" class="img-responsive" alt="Image">
+                                </a>
+                                <figcaption>
+                                    <h4><a href="<?php echo $this->baseUrl( ) . '/habitacion/?id=' . $ad["id"]; ; ?>"><?= $ad["title_ad"] ?></a></h4>
+                                    <span class="f_right"><a href="<?php echo $this->baseUrl() . '/habitacion/?id=' . $ad["id"] . '#comments'; ?>" class="button btn_sm btn_blue">VER COMENTARIO</a></span>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </div>
+                    <?php endforeach; ?>
+                </div>
+                <div class="mt40 a_center">
+                    <a class="button btn_sm btn_yellow" href="<?php echo $this->baseUrl( ) . '/listados/'; ?>"> MÁS ANUNCIOS </a>
+                </div> 
+            </div>
+        </section>-->
+
+<?php endif ?>
+
+
+
+
+<?php if(!$this->isAdministrador) : ?>
+    <!-- ========== inicio slider GALLERY ========== -->
+                <div class="rev_slider_wrapper fullwidthbanner-container" data-alias="instagram-gallery" style="margin:0px auto;background-color:#ffffff;padding:0px;margin-top:0px;margin-bottom:0px;background-repeat:no-repeat;background-size:cover;background-position:center center;">
+                    <div id="galley_sldier" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.0.7">
+                        <ul>
+                            <!-- ITEM -->
+                            <li data-index="rs-1068117989638896933_1703257142" 
+                                data-transition="incube-horizontal" 
+                                data-slotamount="1" 
+                                data-easein="default" 
+                                data-easeout="default" 
+                                data-masterspeed="600" 
+                                data-thumb="images/gallery/gallery1.jpg" 
+                                data-rotate="0" 
+                                data-fstransition="fade" 
+                                data-fsmasterspeed="1500" 
+                                data-fsslotamount="7" 
+                                data-saveperformance="off">
+                                <img src="images/gallery/gallery1.jpg" alt="Image" 
+                                     data-lazyload="images/gallery/gallery1.jpg" 
+                                     data-bgposition="center center" 
+                                     data-bgfit="contain" 
+                                     data-bgrepeat="no-repeat" 
+                                     class="rev-slidebg" 
+                                     data-no-retina>
+                            </li>
+                            <!-- ITEM -->
+                            <li data-index="rs-1067457593278037795_1703257142"
+                                data-transition="incube-horizontal" 
+                                data-slotamount="1"
+                                data-easein="default"
+                                data-easeout="default"
+                                data-masterspeed="600" 
+                                data-thumb="images/gallery/gallery2.jpg"
+                                data-rotate="0"
+                                data-saveperformance="off">
+                                <img src="images/gallery/gallery2.jpg" 
+                                     alt="Image" 
+                                     data-lazyload="images/gallery/gallery2.jpg" 
+                                     data-bgposition="center center"
+                                     data-bgfit="contain" 
+                                     data-bgrepeat="no-repeat" 
+                                     class="rev-slidebg" 
+                                     data-no-retina>
+                            </li>
+                            <!-- ITEM -->
+                            <li data-index="rs-1066136319637421909_1703257142"
+                                data-transition="incube-horizontal" 
+                                data-slotamount="1" 
+                                data-easein="default" 
+                                data-easeout="default" 
+                                data-masterspeed="600"
+                                data-thumb="images/gallery/gallery3.jpg" 
+                                data-rotate="0"
+                                data-saveperformance="off">
+                                <img src="images/gallery/gallery3.jpg" 
+                                     alt="Image" 
+                                     data-lazyload="images/gallery/gallery3.jpg"
+                                     data-bgposition="center center" 
+                                     data-bgfit="contain" 
+                                     data-bgrepeat="no-repeat"
+                                     class="rev-slidebg" 
+                                     data-no-retina>
+                            </li>
+                            <!-- ITEM -->
+                            <li data-index="rs-1065374810946764154_1703257142" 
+                                data-transition="incube-horizontal" 
+                                data-slotamount="1" 
+                                data-easein="default" 
+                                data-easeout="default" 
+                                data-masterspeed="600" 
+                                data-thumb="images/gallery/gallery4.jpg" 
+                                data-rotate="0" 
+                                data-saveperformance="off">
+                                <img src="images/gallery/gallery4.jpg" 
+                                     alt="Image" 
+                                     data-lazyload="images/gallery/gallery4.jpg" 
+                                     data-bgposition="center center"
+                                     data-bgfit="contain" 
+                                     data-bgrepeat="no-repeat" 
+                                     class="rev-slidebg" 
+                                     data-no-retina>
+                            </li>
+                            <!-- ITEM -->
+                            <li data-index="rs-1064413284177902892_1703257142" 
+                                data-transition="incube-horizontal" 
+                                data-slotamount="1" 
+                                data-easein="default" 
+                                data-easeout="default" 
+                                data-masterspeed="600" 
+                                data-thumb="images/gallery/gallery5.jpg" 
+                                data-rotate="0"
+                                data-saveperformance="off">
+                                <img src="images/gallery/gallery5.jpg"
+                                     alt="Image" 
+                                     data-lazyload="images/gallery/gallery5.jpg"
+                                     data-bgposition="center center" 
+                                     data-bgfit="contain"
+                                     data-bgrepeat="no-repeat" 
+                                     class="rev-slidebg" 
+                                     data-no-retina></li>
+                            <!-- ITEM -->
+                            <li data-index="rs-1063931063159586029_1703257142" 
+                                data-transition="incube-horizontal" 
+                                data-slotamount="1" 
+                                data-easein="default" 
+                                data-easeout="default" 
+                                data-masterspeed="600" 
+                                data-thumb="images/gallery/gallery6.jpg"
+                                data-rotate="0" 
+                                data-saveperformance="off">
+                                <img src="images/gallery/gallery6.jpg"
+                                     alt="Image" 
+                                     data-lazyload="images/gallery/gallery6.jpg"
+                                     data-bgposition="center center"
+                                     data-bgfit="contain" 
+                                     data-bgrepeat="no-repeat" 
+                                     class="rev-slidebg" 
+                                     data-no-retina>
+                            </li>
+                            <!-- ITEM -->
+                            <li data-index="rs-1062195545644301328_1703257142" 
+                                data-transition="incube-horizontal"
+                                data-slotamount="1"
+                                data-easein="default" 
+                                data-easeout="default" 
+                                data-masterspeed="600" 
+                                data-thumb="images/gallery/gallery7.jpg"
+                                data-rotate="0" 
+                                data-saveperformance="off">
+                                <img src="images/gallery/gallery7.jpg" 
+                                     alt="Image" 
+                                     data-lazyload="images/gallery/gallery7.jpg" 
+                                     data-bgposition="center center" 
+                                     data-bgfit="contain"
+                                     data-bgrepeat="no-repeat" 
+                                     class="rev-slidebg" 
+                                     data-no-retina>
+                            </li>
+                            <!-- ITEM -->
+                            <li data-index="rs-1059884584333835521_1703257142" 
+                                data-transition="incube-horizontal" 
+                                data-slotamount="1" 
+                                data-easein="default" 
+                                data-easeout="default" 
+                                data-masterspeed="600" 
+                                data-thumb="images/gallery/gallery8.jpg" 
+                                data-rotate="0" 
+                                data-saveperformance="off">
+                                <img src="images/gallery/gallery8.jpg" 
+                                     alt="" 
+                                     data-lazyload="images/gallery/gallery8.jpg" 
+                                     data-bgposition="center center" 
+                                     data-bgfit="contain" 
+                                     data-bgrepeat="no-repeat" 
+                                     class="rev-slidebg" 
+                                     data-no-retina>
+                            </li>
+                            <!-- ITEM -->
+                            <li data-index="rs-1058754772617756608_1703257142" 
+                                data-transition="incube-horizontal" 
+                                data-slotamount="1" 
+                                data-easein="default" 
+                                data-easeout="default" 
+                                data-masterspeed="600" 
+                                data-thumb="images/gallery/gallery9.jpg" 
+                                data-rotate="0" 
+                                data-saveperformance="off">
+                                <img src="images/gallery/gallery9.jpg" 
+                                     alt="Image" 
+                                     data-lazyload="images/gallery/gallery9.jpg" 
+                                     data-bgposition="center center" 
+                                     data-bgfit="contain"
+                                     data-bgrepeat="no-repeat"
+                                     class="rev-slidebg" 
+                                     data-no-retina>
+                            </li>
+                            <!-- ITEM -->
+                            <li data-index="rs-1057423209275685990_1703257142" 
+                                data-transition="incube-horizontal" 
+                                data-slotamount="1" 
+                                data-easein="default"
+                                data-easeout="default" 
+                                data-masterspeed="600" 
+                                data-thumb="images/gallery/gallery10.jpg" 
+                                data-rotate="0" 
+                                data-saveperformance="off">
+                                <img src="images/gallery/gallery10.jpg" 
+                                     alt="Image"
+                                     data-lazyload="images/gallery/gallery10.jpg" 
+                                     data-bgposition="center center"
+                                     data-bgfit="contain" 
+                                     data-bgrepeat="no-repeat" 
+                                     class="rev-slidebg" 
+                                     data-no-retina>
+                            </li>
+                            <!-- ITEM -->
+                            <li data-index="rs-1056268500816986055_1703257142" 
+                                data-transition="incube-horizontal"
+                                data-slotamount="1"
+                                data-easein="default" 
+                                data-easeout="default"
+                                data-masterspeed="600"
+                                data-thumb="images/gallery/gallery11.jpg" 
+                                data-rotate="0" 
+                                data-saveperformance="off">
+                                <img src="images/gallery/gallery11.jpg" 
+                                     alt="Image" 
+                                     data-lazyload="images/gallery/gallery11.jpg" 
+                                     data-bgposition="center center" 
+                                     data-bgfit="contain" 
+                                     data-bgrepeat="no-repeat"
+                                     class="rev-slidebg" 
+                                     data-no-retina>
+                            </li>
+                            <!-- ITEM -->
+                            <li data-index="rs-1054829050203307898_1703257142" 
+                                data-transition="incube-horizontal" 
+                                data-slotamount="1" 
+                                data-easein="default" 
+                                data-easeout="default" 
+                                data-masterspeed="600" 
+                                data-thumb="images/gallery/gallery12.jpg" 
+                                data-rotate="0" 
+                                data-saveperformance="off">
+                                <img src="images/gallery/gallery12.jpg" 
+                                     alt="Image" 
+                                     data-lazyload="images/gallery/gallery12.jpg"
+                                     data-bgposition="center center" 
+                                     data-bgfit="contain" 
+                                     data-bgrepeat="no-repeat"
+                                     class="rev-slidebg" 
+                                     data-no-retina>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    
+    <!-- ========== fin slider GALLER ========== -->
+    
+    
+            <!-- ========== SUBSCRIBE ========== -->
+            <section id="subscribe" class="gradient_overlay">
+                <div class="inner">
+                    <div class="container">
+                        <div class="main_title mt_wave mt_white a_center">
+                            <h2>SUSCRIBETE A NUESTRO NEWSLETTER</h2>
+                        </div>
+                        <p class="main_description md_white a_center" style="font-weight: bold; font-size: 20px;">Si quieres recibir ofertas de viaje y alojamiento, suscribate.</p>
+                        <form id="subscribe-form" name="subscribe">
+                            <div class="form-group">
+                                <input type="email" name="subscribe-email" class="form-control" placeholder="Ingrese su correo electrónico"/>
+                                <button class="button btn_lg btn_yellow" type="submit"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+                            </div>
+                        </form> 
+                    </div>
+                </div>
+            </section>
+    
+            <!-- ========== GALLERY ========== -->
+            <section id="gallery" class="blue_bg">
+                <div class="container">
+                    <div class="main_title mt_wave mt_white a_center">
+                        <h2> GALERIA DE FOTOS </h2>
+                    </div> 
+                    <p class="main_description md_white a_center">Visita nuestra galería de fotos.</p> 
+                </div>
+                <div id="gallery_slider" class="owl-carousel image-gallery">
+                    <!-- ITEM -->
+                    <div class="item">
+                        <a class="hover_effect h_yellow h_lightbox" href="images/gallery/gallery1.jpg">
+                            <img src="images/gallery/gallery1.jpg" alt="Image">
+                        </a>
+                        <div class="gallery_item_info">
+                            <h4>Rooms Service</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing</p>
+                        </div>
+                    </div>
+                    <!-- ITEM -->
+                    <div class="item">
+                        <a class="hover_effect h_yellow h_lightbox" href="images/gallery/gallery2.jpg">
+                            <img src="images/gallery/gallery2.jpg" alt="Image">
+                        </a>
+                        <div class="gallery_item_info">
+                            <h4>Rooms Service</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing</p>
+                        </div>
+                    </div>
+                    <!-- ITEM -->
+                    <div class="item">
+                        <a class="hover_effect h_yellow h_lightbox" href="images/gallery/gallery3.jpg">
+                            <img src="images/gallery/gallery3.jpg" alt="Image">
+                        </a>
+                        <div class="gallery_item_info">
+                            <h4>Rooms Service</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing</p>
+                        </div>
+                    </div>
+                    <!-- ITEM -->
+                    <div class="item">
+                        <a class="hover_effect h_yellow h_lightbox" href="images/gallery/gallery4.jpg">
+                            <img src="images/gallery/gallery4.jpg" alt="Image">
+                        </a>
+                        <div class="gallery_item_info">
+                            <h4>Rooms Service</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing</p>
+                        </div>
+                    </div>
+                    <!-- ITEM -->
+                    <div class="item">
+                        <a class="hover_effect h_yellow h_lightbox" href="images/gallery/gallery5.jpg">
+                            <img src="images/gallery/gallery5.jpg" alt="Image">
+                        </a>
+                        <div class="gallery_item_info">
+                            <h4>Rooms Service</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing</p>
+                        </div>
+                    </div>
+                    <!-- ITEM -->
+                    <div class="item">
+                        <a class="hover_effect h_yellow h_lightbox" href="images/gallery/gallery6.jpg">
+                            <img src="images/gallery/gallery6.jpg" alt="Image">
+                        </a>
+                        <div class="gallery_item_info">
+                            <h4>Rooms Service</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing</p>
+                        </div>
+                    </div>
+                    <!-- ITEM -->
+                    <div class="item">
+                        <a class="hover_effect h_yellow h_lightbox" href="images/gallery/gallery7.jpg">
+                            <img src="images/gallery/gallery7.jpg" alt="Image">
+                        </a>
+                        <div class="gallery_item_info">
+                            <h4>Rooms Service</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing</p>
+                        </div>
+                    </div>
+                    <!-- ITEM -->
+                    <div class="item">
+                        <a class="hover_effect h_yellow h_lightbox" href="images/gallery/gallery8.jpg">
+                            <img src="images/gallery/gallery8.jpg" alt="Image">
+                        </a>
+                        <div class="gallery_item_info">
+                            <h4>Rooms Service</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing</p>
+                        </div>
+                    </div>
+                    <!-- END ITEM -->
+                </div>
+
+                <div class="container">
+                    <div class="mt40 a_center">
+                        <a class="button btn_sm btn_dark upper" href="<?php echo $this->baseUrl( ) . '/gallery/'; ?>"> VER MÁS FOTOS DE NUESTRA GALERIA </a>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ========== GALLERY 2 ========== -->
+
+            <!-- ========== GALLERY 3 ========== -->
+
+            <!-- ========== GALLERY 4 ========== -->
+
+            <!-- ========== TESTIMONIALS ========== -->
+
+            <!-- ========== CONTACT ========== -->
+
+            <section class="white_bg" id="contact">
+                <div class="container">
+                    <div class="main_title mt_wave a_center">
+                        <h2> CONTÁCTANOS </h2>
+                    </div> 
+                        <p class="main_description a_center">Si quieres más información sobre la opción elegida rellena este formulario.</p> 
+                    <div class="row">
+<!--                        <div class="col-md-6">
+                            <div id="map-canvas"></div>
+                        </div>-->
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="contact-items">
+<!--                                <div class="col-md-4 col-sm-4">
+                                        <div class="contact-item">
+                                            <i class="glyphicon glyphicon-map-marker"></i>
+                                            <br/>
+                                            <h6>Navagio Zakynthos</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4">
+                                        <div class="contact-item">
+                                            <i class="glyphicon glyphicon-phone-alt"></i>
+                                            <br/>
+                                            <h6>1-888-123-4567</h6>
+                                        </div>
+                                    </div> -->
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="contact-item">
+                                            <i class="fa fa-envelope"></i>
+                                            <br/>
+                                            <h6>administrador@viajacon.es</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="ajax-send-message-box">
+                                <form id="contact-form" name="contact-form">
+                                    <div id="contact-result"></div>
+                                    <div class="form-group">
+                                        <input class="form-control" name="name" placeholder="Tu nombre" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" name="email" placeholder="Tu correo electrónico" type="email">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-control" name="message" placeholder="Escribe tu mensaje"></textarea>
+                                    </div>
+                                    <button class="button btn_lg btn_blue btn_full upper" type="button" onclick="sendMessage();"><i class="fa fa-location-arrow"></i> Enviar mensaje </button>
+                                </form>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+<?php endif; ?>
+            
+    <script type="text/javascript">
+        var tpj = jQuery;
+        var revapi468;
+        tpj(document).ready(function () {
+            if (tpj("#galley_sldier").revolution == undefined) {
+                revslider_showDoubleJqueryError("#galley_sldier");
+            } else {
+                revapi468 = tpj("#galley_sldier").show().revolution({
+                    sliderType: "standard",
+                    sliderLayout: "FullScreen",
+                    dottedOverlay: "none",
+                    delay: 10000,
+                    navigation: {
+                        keyboardNavigation: "on",
+                        keyboard_direction: "horizontal",
+                        mouseScrollNavigation: "off",
+                        mouseScrollReverse: "default",
+                        onHoverStop: "off",
+                        arrows: {
+                            style: "hesperiden",
+                            enable: true,
+                            hide_onmobile: true,
+                            hide_under: 778,
+                            hide_onleave: true,
+                            hide_delay: 200,
+                            hide_delay_mobile: 1200,
+                            tmp: '',
+                            left: {
+                                h_align: "left",
+                                v_align: "center",
+                                h_offset: 20,
+                                v_offset: 0
+                            },
+                            right: {
+                                h_align: "right",
+                                v_align: "center",
+                                h_offset: 20,
+                                v_offset: 0
+                            }
+                        },
+                        thumbnails: {
+                            style: "gyges",
+                            enable: true,
+                            width: 70,
+                            height: 70,
+                            min_width: 70,
+                            wrapper_padding: 15,
+                            wrapper_color: "#222222",
+                            wrapper_opacity: "1",
+                            tmp: '<span class="tp-thumb-img-wrap">  <span class="tp-thumb-image"></span></span>',
+                            visibleAmount: 12,
+                            hide_onmobile: false,
+                            hide_onleave: false,
+                            direction: "horizontal",
+                            span: true,
+                            position: "outer-bottom",
+                            space: 10,
+                            h_align: "left",
+                            v_align: "top",
+                            h_offset: 0,
+                            v_offset: 0
+                        }
+                    },
+                    carousel: {
+                        border_radius: "20px",
+                        padding_top: "50",
+                        padding_bottom: "50",
+                        maxRotation: 35,
+                        vary_rotation: "on",
+                        minScale: 25,
+                        vary_scale: "on",
+                        horizontal_align: "center",
+                        vertical_align: "center",
+                        fadeout: "on",
+                        vary_fade: "on",
+                        maxVisibleItems: 7,
+                        infinity: "on",
+                        space: 30,
+                        stretch: "off"
+                    },
+                    responsiveLevels: [1240, 1240, 778, 480],
+                    visibilityLevels: [1240, 1240, 778, 480],
+                    gridwidth: [640, 640, 480, 320],
+                    gridheight: [640, 640, 480, 320],
+                    lazyType: "smart",
+                    shadow: 0,
+                    spinner: "spinner3",
+                    stopLoop: "on",
+                    stopAfterLoops: -1,
+                    stopAtSlide: -1,
+                    shuffle: "off",
+                    autoHeight: "off",
+                    disableProgressBar: "on",
+                    hideThumbsOnMobile: "off",
+                    hideSliderAtLimit: 0,
+                    hideCaptionAtLimit: 0,
+                    hideAllCaptionAtLilmit: 0,
+                    debugMode: false,
+                    fallbacks: {
+                        simplifyAll: "off",
+                        nextSlideOnWindowFocus: "off",
+                        disableFocusListener: false,
+                    }
+                });
+            }
+        });
+        
+        
+        
+    </script>
+            

@@ -1,0 +1,113 @@
+<style type="text/css">
+
+    body {
+        font: 13px Arial, Helvetica, Sans-serif;
+    }
+
+    .uploadifive-button {
+        float: left;
+        margin-right: 84px;
+    }
+
+    #queue1, #queue2, #queue3  {
+        border: 1px solid #E5E5E5;
+        height: 177px;
+        overflow: auto;
+        margin-bottom: 10px;
+        padding: 0 3px 3px;
+        width: 404px;
+    }
+
+</style>
+
+<div style="margin-top: 20px;">
+    <form>
+        <div id="queue1"></div>
+        <input id="file_upload_ibi" name="file_upload_ibi" type="file" multiple="true">
+        <input class="uploadifive-button" style="width: 120px; padding:8px;" type="button" onclick="$('#file_upload_ibi').uploadifive('upload');" value="Upload Files">
+    </form>
+    <br/>
+</div>
+
+<div style="clear: both;"></div>
+
+<div style="margin-top: 20px;">
+    <form>
+        <div id="queue2"></div>
+        <input id="file_upload" name="file_upload" type="file" multiple="true">
+        <input class="uploadifive-button" style="width: 120px; padding:8px;" type="button" onclick="$('#file_upload').uploadifive('upload');" value="Upload Files">
+    </form>
+    <br/>
+</div>
+
+<div style="clear: both;"></div>
+
+<div style="margin-top: 20px;">
+    <form>
+        <div id="queue3"></div>
+        <input id="file_upload_gallery" name="file_upload_gallery" type="file" multiple="true">
+        <input class="uploadifive-button" style="width: 120px; padding:8px;" type="button" onclick="$('#file_upload_gallery').uploadifive('upload');" value="Upload Files">
+    </form>
+    <br/>
+</div>
+
+<script type="text/javascript">
+    <?php $timestamp = time();?>
+    <?php $timestamp2 = time();?>
+    <?php $timestamp3 = time();?>    
+    $(function() {
+
+            $('#file_upload_ibi').uploadifive({
+                'auto'             : false,
+                'buttonText'       : 'Recibo del IBI',
+            //  'checkScript'      : 'check-exists.php',
+                'width'            : 200, 
+                'formData'         : {
+                                        'timestamp' : '<?php echo $timestamp;?>',
+                                        'token'     : '<?php echo md5('unique_salt' . $timestamp);?>'
+                                         },
+                'queueID'          : 'queue1',
+                'uploadScript'     : '<?php echo $this->baseUrl() . "/alta-anuncio/execute-upload-ibi";?>',
+                'onUploadComplete' : function(file, data) { console.log(data); }
+            });
+
+            $('#file_upload').uploadifive({
+                'auto'             : false,
+                'buttonText'       : 'Home (1: [715x450])',
+            //  'checkScript'      : 'check-exists.php',
+                'width'            : 200, 
+                'formData'         : {
+                                        'timestamp' : '<?php echo $timestamp2;?>',
+                                        'token'     : '<?php echo md5('unique_salt' . $timestamp2);?>'
+                                         },
+                'queueID'          : 'queue2',
+                'uploadScript'     : '<?php echo $this->baseUrl() . "/alta-anuncio/execute-upload-pic";?>',
+                'onUploadComplete' : function(file, data) { console.log(data); }
+            });
+             
+            $('#file_upload_gallery').uploadifive({
+                'auto'             : false,
+                'buttonText'       : 'Galeria (8 : [750x400])',
+            //  'checkScript'      : 'check-exists.php',
+                'width'            : 200,
+                'formData'         : {
+                                        'timestamp' : '<?php echo $timestamp3;?>',
+                                        'token'     : '<?php echo md5('unique_salt' . $timestamp3);?>'
+                                         },
+                'queueID'          : 'queue3',
+                'uploadScript'     : '<?php echo $this->baseUrl() . "/alta-anuncio/execute-upload-gallery-pics";?>',
+                'onUploadComplete' : function(file, data) { console.log(data); }
+            });
+     });
+</script>
+    
+    
+    
+    
+
+
+       
+       
+   
+ 
+   

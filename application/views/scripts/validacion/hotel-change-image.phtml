@@ -1,0 +1,180 @@
+<style type="text/css">
+
+    body {
+        font: 13px Arial, Helvetica, Sans-serif;
+    }
+
+    .uploadifive-button {
+        float: left;
+        margin-right: 84px;
+    }
+
+    #queue1, #queue2, #queue3  {
+        border: 1px solid #E5E5E5;
+        height: 177px;
+        overflow: auto;
+        margin-bottom: 10px;
+        padding: 0 3px 3px;
+        width: 404px;
+    }
+
+</style>
+
+
+<div class="page_title gradient_overlay" style="background: url(images/page_title_bg.jpg);">
+    <div class="container">
+        <div class="inner">
+            <h1>Edición</h1>
+            <ol class="breadcrumb">
+                <li><a href="<?php echo $this->baseUrl() . '/'; ?>">Home</a></li>
+                <li>Edición de imagenes</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+
+<div style="padding: 40px;">
+    <div class="row">
+        <div class="col-md-8">    
+    
+            <div style="margin-top: 20px;">
+                <form>
+                    <div id="queue1"></div>
+                        <input id="file_upload" name="file_upload" type="file" multiple="true">
+                        <input class="uploadifive-button" style="width: 120px; padding:8px;" type="button" onclick="$('#file_upload').uploadifive('upload');" value="Upload Files">
+                    </form>
+                <br/>
+            </div>
+            
+<!--            <form>
+                <div id="queue"></div>
+                <input id="file_upload" name="file_upload" type="file" multiple="true">
+            </form>-->
+        
+<!--            <div id="booking_advanced" style="margin-top: 50px;">     
+                <form id="booking_form_advanced">
+                    <div class="form-group">
+                     <div class="form_select">
+                    <div style="margin-left: -10px;">
+                        <?= $this->gallery; ?>
+                    </div>
+                    </div>     
+                    </div>     
+                        <div style="clear:both;"></div>
+                    <input id="file_upload_gallery" name="file_upload_gallery" type="file" multiple="true">
+                </form>
+                
+            </div>         -->
+
+
+            <div id="booking_advanced" style="margin-top: 50px;">
+                <form>
+                    <div class="form-group col-md-4">
+                        <div class="form_select">
+                            <div style="margin-left: -20px;">
+                                <?= $this->gallery; ?>
+                            </div>
+                        </div>     
+                    </div>     
+
+                    <div style="clear:both;"></div>
+
+                    <div id="queue3"></div>
+                    <input id="file_upload_gallery" name="file_upload_gallery" type="file" multiple="true">
+                    <input class="uploadifive-button" style="width: 120px; padding:8px;" type="button" onclick="$('#file_upload_gallery').uploadifive('upload');" value="Upload Files">
+                </form>
+                <br/>
+            </div>
+
+
+        </div>
+    </div>     
+</div>
+            
+            
+            
+<script type="text/javascript">
+
+    <?php $timestamp = time();?>
+    <?php $timestamp2 = time();?>
+
+    $(function() {
+
+        $('#file_upload').uploadifive({
+                'auto'             : false,
+                'buttonText'       : 'Home (1: [715x450])',
+            //  'checkScript'      : 'check-exists.php',
+                'width'            : 200, 
+                'formData'         : {
+                                        'timestamp' : '<?php echo $timestamp;?>',
+                                        'token'     : '<?php echo md5('unique_salt' . $timestamp);?>'
+                                         },
+                'queueID'          : 'queue1',
+                'uploadScript'     : '<?php echo $this->baseUrl() . "/alta-anuncio/hotel-update-upload-pic/?id=" . $this->id;?>',
+                'onUploadComplete' : function(file, data) { console.log(data); }
+            });
+
+//         $('#file_upload').uploadify({
+//         'formData'     : {
+//                         'timestamp' : '<?php //echo $timestamp;?>',
+//                         'token'     : '<?php //echo md5('unique_salt' . $timestamp);?>'
+//                 },
+//          'swf'      : '<?php //echo $this->baseUrl( ) . "/swf/uploadify.swf";?>',
+//          'uploader' : '<?php //echo $this->baseUrl( ) . "/alta-anuncio/update-upload-pic/?id=" . $this->id;?>',
+//          'buttonText' : 'Home (imagen: 715x450)',
+//          'width' : '200'
+//         });
+
+
+            $('#file_upload_gallery').uploadifive({
+                'auto'             : false,
+                'buttonText'       : 'Galeria (30 : [750x400])',
+            //  'checkScript'      : 'check-exists.php',
+                'width'            : 200,
+//                'formData'         : {
+//                                        'timestamp' : '<?php //echo $timestamp2;?>',
+//                                        'token'     : '<?php echo md5('unique_salt' . $timestamp2);?>'
+//                                         },
+                
+                'onUpload' : function(){
+                            $('#file_upload_gallery').data('uploadifive').settings.formData = {
+                                'timestamp': '<?php echo $timestamp;?>',
+                                'token': '<?php echo md5('unique_salt' . $timestamp);?>',
+                                'pic': $('#gallery').val()
+                            }},                
+                                                 
+                                                 
+                'queueID'          : 'queue3',
+                'uploadScript'     : '<?php echo $this->baseUrl() . "/alta-anuncio/hotel-update-upload-gallery-pics/?id=" . $this->id;?>',
+//                'onUploadStart' : function() {$("#file_upload_gallery").uploadifive("settings", 'formData', {'pic' : $("#gallery").val()}); },
+                'onUploadComplete' : function(file, data) { console.log(data); }
+        
+            });
+
+
+//         $('#file_upload_gallery').uploadify({
+//         'formData'     : {
+//                         'timestamp' : '<?php //echo $timestamp2;?>',
+//                         'token'     : '<?php //echo md5('unique_salt' . $timestamp2);?>'
+//                 },
+//          'swf'      : '<?php //echo $this->baseUrl( ) . "/swf/uploadify.swf";?>',
+//          'uploader' : '<?php //echo $this->baseUrl( ) . "/alta-anuncio/update-upload-gallery-pics/?id=" . $this->id;?>',
+//          'buttonText' : 'Galeria (imagen: 750x400)',
+//          'width' : '200',
+//          'onUploadStart' : function() {
+//              $("#file_upload_gallery").uploadify("settings", 'formData', {'pic' : $("#gallery").val()});
+//          }                    
+//         });
+
+
+    });
+
+</script>
+    
+    
+
+   
+       
+   
+ 

@@ -1,0 +1,424 @@
+<style>
+    .form-control .btn-select, .form-control .btn-select:hover, .form-control .btn-select:focus {
+        font-size: 0.85em;
+        
+    }
+
+/**************************************/
+/*  NEW CHECK BOX
+/**************************************/
+
+    .content-input input,
+    .content-select select{
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+    }  
+
+    .content-input input{
+            visibility: hidden;
+            position: absolute;
+            right: 0;
+    }
+
+    .content-input{
+            position: relative;
+            margin-bottom: 30px;
+            padding:5px 0 5px 60px; /* Damos un padding de 60px para posicionar 
+            el elemento <i> en este espacio*/
+            display: block;
+    }
+
+    /* Estas reglas se aplicarán a todos las elementos i 
+    después de cualquier input*/
+    .content-input input + i{
+           background: #f0f0f0;
+           border:2px solid rgba(0,0,0,0.2);
+           position: absolute; 
+           left: 0;
+           top: 0;
+    }
+ 
+    /* Estas reglas se aplicarán a todos los i despues 
+    de un input de tipo checkbox*/
+    .content-input input[type=checkbox ] + i{
+            width: 52px;
+            height: 30px;
+            border-radius: 15px;
+    }
+
+    /*
+    Creamos el círculo que aparece encima de los checkbox
+    con la etqieta before. Importante aunque no haya contenido
+    debemos poner definir este valor.
+    */
+    .content-input input[type=checkbox] + i:before{
+            content: ''; /* No hay contenido */
+            width: 26px;
+            height: 26px;
+            background: #fff;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 1;
+            left: 0px;
+            top: 0px;
+            -webkit-box-shadow: 3px 0 3px 0 rgba(0,0,0,0.2);
+            box-shadow: 3px 0 3px 0 rgba(0,0,0,0.2);
+    }
+    .content-input input[type=checkbox]:checked + i:before{
+            left: 22px;
+            -webkit-box-shadow: -3px 0 3px 0 rgba(0,0,0,0.2);
+            box-shadow: 3px 0 -3px 0 rgba(0,0,0,0.2);
+    }
+ 
+    .content-input input[type=checkbox]:checked + i{
+     background: #2AC176;
+    }
+
+
+    .content-input input[type=checkbox] + i:after{
+            content: 'SI';
+            position: absolute;
+            font-size: 10px;
+            color: rgba(255,255,255,0.6);
+            top: 8px;
+            left: 4px;
+            opacity: 0 /* Ocultamos este elemento */;
+            transition: all 0.25s ease 0.25s;
+    }
+ 
+    /* Cuando esté checkeado cambiamos la opacidad a 1 y lo mostramos */
+    .content-input input[type=checkbox]:checked + i:after{
+     opacity: 1;
+    }
+
+</style>
+
+
+
+<script type="text/javascript">   
+   
+
+$(document).ready(function() { 
+  
+//    $(".notification").delay(15000).queue(function (next) {
+//        $(this).addClass("scale-out");
+//        next();
+//    });
+//                
+//    $(".notification").on("click", function(){ 
+//        $(this).addClass("scale-out");
+//    });
+
+
+});
+                
+function saveAd() {
+
+    $(window).scrollTop(0);
+    //var front = 1;   $("#description").val();
+    var urlPath = baseUrl + '/alta-anuncio/save-ad/';
+    $.ajax({
+        type: "POST",
+        url: urlPath,
+        cache: false,
+        data: $("#booking_form_advanced").serialize(),
+        success: function(html) {
+            $("#ajax-box").html(html);
+        }
+    });
+
+    var output;
+    output = '<div class="notification success"><span class="notification-icon"><i class="fa fa-check" aria-hidden="true"></i></span><span class="notification-text">Se guardo fatisfactoriamente!</span></div>';
+    
+    $("#notification").html(output);
+    $(".notification").delay(5000).queue(function (next) {
+        $(this).addClass("scale-out");
+        next();
+    });
+    $(".notification").on("click", function(){ 
+        $(this).addClass("scale-out");
+    });
+
+}
+
+</script>         
+             
+
+
+
+
+<!-- =========== PAGE TITLE ========== -->
+<div class="page_title gradient_overlay" style="background: url(images/page_title_bg.jpg);">
+    <div class="container">
+        <div class="inner">
+            <h1> Alta </h1>
+            <ol class="breadcrumb">
+                <li><a href="<?= $this->baseUrl( ) . '/'; ?>">Home</a></li>
+                <li> Alta de hoteles </li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+
+   <!-- =========== MAIN ========== -->
+<main id="booking_page">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-md-8">
+                <div id="booking_advanced">
+
+                    <div class="main_title a_left upper">
+                        <h2>Alta Hoteles</h2>
+                    </div>
+                    <!-- ========== ANUNCIO FORM ========== -->
+                    <div id="ajax-box" class="row">
+                        <form id="booking_form_advanced" action="<?= $this->url(array('controller'=>'alta-anuncio','action'=>'guardar-hotel')); ?>" method="post">
+                            
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Estrellas</label>
+                                    <div class="form_select">
+                                        <select id="estrellasId" name="estrellasId" class="form-control" title="Seleccionar estrellas" data-header="Estrellas del hotel">
+                                            <option value="1" data-subtext="<span class='label label-info'></span>">1 Estrella</option>
+                                            <option value="2" data-subtext="<span class='label label-info'></span>">2 Estrellas</option>
+                                            <option value="3" data-subtext="<span class='label label-info'></span>">3 Estrellas</option>
+                                            <option value="4" data-subtext="<span class='label label-info'></span>">4 Estrellas</option>
+                                            <option value="5" data-subtext="<span class='label label-info'></span>">5 Estrellas</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>                                    
+                            
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Título</label>
+                                    <input id="tituloAnuncio" name="tituloAnuncio" type="text" maxlength="255" class="form-control" placeholder="Título del anuncio"/>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Titulo del enlace "Href"</label>
+                                    <input id="tituloEnlace" name="tituloEnlace" type="text" maxlength="255" class="form-control" placeholder="Título del enlace"/>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Url Amigable/Tooltip</label>
+                                    <input id="urlAmigable" name="urlAmigable" type="text" maxlength="255" class="form-control" placeholder="URL amigable"/>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Dirección del hotel</label>
+                                    <input id="direccionHotel" name="direccionHotel" type="text" maxlength="255" class="form-control" placeholder="Dirección del hotel"/>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Localidad</label>
+                                    <input id="localidad" name="localidad" type="text" maxlength="200" class="form-control" placeholder="Localidad"/>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Provincia</label>
+                                    <input id="provincia" name="provincia" type="text" maxlength="200" class="form-control" placeholder="Provincia"/>
+                                </div>
+                            </div>
+                            
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Titulo oferta</label>
+                                    <input id="tituloOferta" name="tituloOferta" type="text" maxlength="100" class="form-control" placeholder="Título de la oferta"/>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label> Precio </label>
+                                    <input id="precio" name="precio" type="text" maxlength="50" class="form-control" placeholder="Precio"/>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label> Teléfono </label>
+                                    <input id="telefono" name="telefono" type="text" maxlength="50" class="form-control" placeholder="Teléfono"/>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label> Título imagen </label>
+                                    <input id="tituloImagen" name="tituloImagen" type="text" maxlength="255" class="form-control" placeholder="Título imagen"/>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label> Alt imagen </label>
+                                    <input id="altImagen" name="altImagen" type="text" maxlength="255" class="form-control" placeholder="Alt imagen"/>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label> Titulo SEO </label>
+                                    <input id="tituloSeo" name="tituloSeo" type="text" maxlength="80" class="form-control" placeholder="Título SEO"/>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Contenido SEO</label>
+                                    <textarea id="contenidoSeo" name="contenidoSeo" class="form-control" placeholder="Contenio SEO ..."></textarea>
+                                </div>
+                            </div>
+                            <div>
+                                
+                            </div>
+                            
+                            <label>Servicios:</label>
+                            
+                            <div class="col-md-12">
+                                <div class="room_services">
+                                    <div class="col-md-6">
+                                        <label class="content-input">
+                                            <input type="checkbox" name="services[pub]" id="pub" value="1">
+                                            <i></i>
+                                            <span class="fa fa-glass" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Bar" data-original-title="Servicio"></span>    
+                                        </label>
+                                        <label class="content-input">
+                                            <input type="checkbox" name="services[wifi]" id="wifi" value="1">
+                                            <i></i>
+                                            <span class="fa fa-wifi" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Wi Fi" data-original-title="Servicio"></span>
+                                        </label>
+                                        <label class="content-input">
+                                            <input type="checkbox" name="services[parking]" id="parking" value="1">
+                                            <i></i>
+                                            <span class="fa fa-product-hunt" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Parking" data-original-title="Servicio"></span>
+                                        </label>
+                                        <label class="content-input">
+                                            <input type="checkbox" name="services[spa]" id="spa" value="1">
+                                            <i></i>
+                                            <span class="fa fa-shower" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Spa y gimnasio" data-original-title="Servicio"></span>
+                                        </label>
+                                        <label class="content-input">
+                                            <input type="checkbox" name="services[restaurant]" id="restaurant" value="1">
+                                            <i></i>
+                                            <span class="fa fa-cutlery" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Restaurante" data-original-title="Servicio"></span>
+                                        </label>
+                                        <label class="content-input">
+                                            <input type="checkbox" name="services[others]" id="others" value="1">
+                                            <i></i>
+                                            <span class="fa fa-star" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Otros: Aire acondicionado, caja fuerte, servicio de habitación" data-original-title="Servicio"></span>
+                                        </label>
+                                        <label class="content-input">
+                                            <input type="checkbox" name="services[additional]" id="additional" value="1">
+                                            <i></i>
+                                            <span class="fa fa-info" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Adicionales: Lavandería, camarera de piso, ascensor, guardaequipaje" data-original-title="Servicio"></span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="content-input">
+                                            <input type="checkbox" name="services[reception]" id="reception" value="1">
+                                            <i></i>
+                                            <span class="fa fa-user-md" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Recepción 24 horas, conserjería, recepcionistas multilingües, servicio de botones" data-original-title="Servicio"></span>    
+                                        </label>
+                                        <label class="content-input">
+                                            <input type="checkbox" name="services[entertainment]" id="entertainment" value="1">
+                                            <i></i>
+                                            <span class="fa fa-music" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Salas de entretenimiento" data-original-title="Servicio"></span>
+                                        </label>
+                                        <label class="content-input">
+                                            <input type="checkbox" name="services[disabled]" id="disabled" value="1">
+                                            <i></i>
+                                            <span class="fa fa-wheelchair" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Personas con discapacidad" data-original-title="Servicio"></span>
+                                        </label>
+                                        <label class="content-input">
+                                            <input type="checkbox" name="services[smoke]" id="smoke" value="1">
+                                            <i></i>
+                                            <span class="fa fa-fire" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Área de fumadores" data-original-title="Servicio"></span>
+                                        </label>
+                                        <label class="content-input">
+                                            <input type="checkbox" name="services[services]" id="services" value="1">
+                                            <i></i>
+                                            <span class="fa fa-wrench" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Terrazas, secador, sala de banquetes y eventos, servicio de bodas, piscinas, centro de negocios, centro de negocios" data-original-title="Servicio"></span>
+                                        </label>
+                                        <label class="content-input">
+                                            <input type="checkbox" name="services[taxi]" id="taxi" value="1">
+                                            <i></i>
+                                            <span class="fa fa-automobile" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Recojo y traslados al aeropuerto" data-original-title="Servicio"></span>
+                                        </label>
+                                        <label class="content-input">
+                                            <input type="checkbox" name="services[shopping]" id="shopping" value="1">
+                                            <i></i>
+                                            <span class="fa fa-shopping-bag" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Tienda de regalos" data-original-title="Servicio"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-12">
+                                <button type="submit" class="button btn_blue pull-right"> <i class="fa fa-calendar-check-o" aria-hidden="true"></i> CONTINUAR </button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="special_offers">
+                    <div class="main_title a_left upper">
+                        <h2>Special Offers</h2>
+                    </div>
+                    <article class="room mb40">
+                        <figure>
+                            <a href="room.html" class="hover_effect h_blue h_link">
+                                <img src="images/rooms/special1.jpg" class="img-responsive" alt="Image">
+                            </a>
+                            <figcaption>
+                                <h4><a href="room.html">Single Room</a></h4>
+                                <div class="price">â‚¬ 89<span> / night</span></div>
+                            </figcaption>
+                        </figure>
+                    </article>
+                    <article class="room mb40">
+                        <figure>
+                            <a href="room.html" class="hover_effect h_blue h_link">
+                                <img src="images/rooms/special2.jpg" class="img-responsive" alt="Image">
+                            </a>
+                            <figcaption>
+                                <h4><a href="room.html">Double Room</a></h4>
+                                <div class="price">â‚¬ 129<span> / night</span></div>
+                            </figcaption>
+                        </figure>
+                    </article>
+                    <article class="room mb40">
+                        <figure>
+                            <a href="room.html" class="hover_effect h_blue h_link">
+                                <img src="images/rooms/special3.jpg" class="img-responsive" alt="Image">
+                            </a>
+                            <figcaption>
+                                <h4><a href="room.html">Delux Room</a></h4>
+                                <div class="price">â‚¬ 189<span> / night</span></div>
+                            </figcaption>
+                        </figure>
+                    </article>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+</main>
+   

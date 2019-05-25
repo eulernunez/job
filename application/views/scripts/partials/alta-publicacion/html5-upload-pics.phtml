@@ -1,0 +1,45 @@
+<style type="text/css">
+    body {
+        font: 13px Arial, Helvetica, Sans-serif;
+    }
+
+    .uploadifive-button {
+        float: left;
+        margin-right: 84px;
+    }
+
+    #queue {
+        border: 1px solid #E5E5E5;
+        height: 177px;
+        overflow: auto;
+        margin-bottom: 10px;
+        padding: 0 3px 3px;
+        width: 300px;
+    }
+</style>
+
+
+<div>
+    <form>
+        <div id="queue"></div>
+        <input id="file_upload" name="file_upload" type="file" multiple="true">
+        <input class="uploadifive-button" style="width: 120px; padding:8px;" type="button" onclick="$('#file_upload').uploadifive('upload');" value="Upload Files">
+    </form>
+    
+    <script type="text/javascript">
+        <?php $timestamp = time();?>
+        $(function() {
+            $('#file_upload').uploadifive({
+                'auto'             : false,
+            //  'checkScript'      : 'check-exists.php',
+                'formData'         : {
+                                        'timestamp' : '<?php echo $timestamp;?>',
+                                        'token'     : '<?php echo md5('unique_salt' . $timestamp);?>'
+                                         },
+                'queueID'          : 'queue',
+                'uploadScript'     : '<?php echo $this->baseUrl() . "/alta-publicacion/execute-upload-pic";?>',
+                'onUploadComplete' : function(file, data) { console.log(data); }
+            });
+        });
+    </script>
+</div>
