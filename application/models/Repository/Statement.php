@@ -101,17 +101,17 @@ class Application_Model_Repository_Statement
 
     }
 
-    public function fetchAllHoteles($state)
+    public function fetchAllEmpleos($state)
     {
 
         $query = "SELECT
-                h.*,
+                e.*,
                 p.id AS pic,
                 p.file_name,
                 p.file_ext,
                 p.section_id
-                FROM hoteles AS h INNER JOIN hotel_pics AS p ON h.id = p.hotel_id
-                                  WHERE p.section_id=1 AND h.activo = $state ORDER BY h.fecha_creacion DESC";
+                FROM empleos AS e INNER JOIN empleo_pics AS p ON e.id = p.empleo_id
+                                  WHERE p.section_id=1 AND e.activo = $state ORDER BY e.fecha_creacion DESC";
         //die('XXXpre>' . print_r($query, true) . '</pre>'); 
         $stmt = $this->system->getDbObject()->query($query);
         //die('<pre>' . print_r($stmt,true) . '</pre>'); 

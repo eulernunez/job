@@ -42,54 +42,19 @@ class IndexController extends BaseSiteController
             $state = '1';
         }
 
-        $ads = array();
-        $ads = $repository->fetchAllAds($state);
+        //$ads = array();
+        //$ads = $repository->fetchAllAds($state);
         //Comment this above line
         //$this->view->ads = $ads;
         
         // New feature
-        $hoteles = array();
-        $repository = new Application_Model_Repository_Statement();
-        $hoteles = $repository->fetchAllHoteles('1');
+        $empleos = array();
+        //$repository = new Application_Model_Repository_Statement();
+        $empleos = $repository->fetchAllEmpleos('1');
 
         $services = array();
         $messages = array();
         
-        foreach($hoteles as $key => $value) {
-            $services[$value['id']]['fa-glass'] = (int)$value['pub'];
-            $messages[$value['id']]['fa-glass'] = 'Bar';
-            $services[$value['id']]['fa-wifi'] = (int)$value['wifi'];
-            $messages[$value['id']]['fa-wifi'] = 'Wifi';
-            $services[$value['id']]['fa-product-hunt'] = (int)$value['parking'];
-            $messages[$value['id']]['fa-product-hunt'] = 'Parking';
-            $services[$value['id']]['fa-shower'] = (int)$value['spa'];
-            $messages[$value['id']]['fa-shower'] = 'Spa y gimnasio';
-            $services[$value['id']]['fa-cutlery'] = (int)$value['restaurant'];
-            $messages[$value['id']]['fa-cutlery'] = 'Restaurante';
-            $services[$value['id']]['fa-star'] = (int)$value['others'];
-            $messages[$value['id']]['fa-star'] = 'Otros: Aire acondicionado, caja fuerte, servicio de habitación';
-            $services[$value['id']]['fa-info'] = (int)$value['additional'];
-            $messages[$value['id']]['fa-info'] = 'Adicionales: Lavandería, camarera de piso, ascensor, guardaequipaje';
-            $services[$value['id']]['fa-user-md'] = (int)$value['reception'];
-            $messages[$value['id']]['fa-user-md'] = 'Recepción 24 horas, conserjería, recepcionistas multilingües, servicio de botones';
-            $services[$value['id']]['fa-music'] = (int)$value['entertainment'];
-            $messages[$value['id']]['fa-music'] = 'Salas de entretenimiento';
-            $services[$value['id']]['fa-wheelchair'] = (int)$value['disabled'];
-            $messages[$value['id']]['fa-wheelchair'] = 'Personas con discapacidad';
-            $services[$value['id']]['fa-fire'] = (int)$value['smoke'];
-            $messages[$value['id']]['fa-fire'] = 'Área de fumadores';
-            $services[$value['id']]['fa-wrench'] = (int)$value['services'];
-            $messages[$value['id']]['fa-wrench'] = 'Terrazas, secador, sala de banquetes y eventos, servicio de bodas, piscinas, centro de negocios, centro de negocios';
-            $services[$value['id']]['fa-automobile'] = (int)$value['taxi'];
-            $messages[$value['id']]['fa-automobile'] = 'Recojo y traslados al aeropuerto';
-            $services[$value['id']]['fa-shopping-bag'] = (int)$value['shopping'];
-            $messages[$value['id']]['fa-shopping-bag'] = 'Tienda de regalos';
-        }
-
-        //echo('$hoteles: <pre>' . print_r($hoteles, true) . '</pre>');
-        //echo('$services: <pre>' . print_r($services, true) . '</pre>');
-
-        //$this->view->ads = $hoteles;
         $this->view->services = $services;
         $this->view->messages = $messages;
         
@@ -106,7 +71,7 @@ class IndexController extends BaseSiteController
         $page = $this->_getParam('page',1);
 
         Zend_View_Helper_PaginationControl::SetDefaultViewPartial('paginator/paginator.phtml');
-        $paginator = Zend_Paginator::factory($hoteles);
+        $paginator = Zend_Paginator::factory($empleos);
         $paginator->setItemCountPerPage($recordPage)
                   ->setCurrentPageNumber($page)
                   ->setPageRange($numberPage);
@@ -114,8 +79,8 @@ class IndexController extends BaseSiteController
         $adsList = '';
 
         foreach ( $paginator as $anuncio) {
-            $anuncio['serviceicons'] = $services[$anuncio['id']];
-            $anuncio['messageicons'] = $messages[$anuncio['id']];
+            //$anuncio['serviceicons'] = $services[$anuncio['id']];
+            //$anuncio['messageicons'] = $messages[$anuncio['id']];
             $adsList .= $this->view->partial('partials/paginator/item.phtml', $anuncio);
         }
         $adsList = $adsList . $paginator   ;
