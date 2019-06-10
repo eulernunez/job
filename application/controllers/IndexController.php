@@ -51,7 +51,8 @@ class IndexController extends BaseSiteController
         $empleos = array();
         //$repository = new Application_Model_Repository_Statement();
         $empleos = $repository->fetchAllEmpleos('1');
-
+        $pics = $repository->fechThumbailPics();
+        
         $services = array();
         $messages = array();
         
@@ -59,7 +60,7 @@ class IndexController extends BaseSiteController
         $this->view->messages = $messages;
         
         $this->view->adsUpdated = $repository->fetchAllAds('1');
-/**********************************************************************************************************/
+/*******************************************************************************/
 
         // PAGINADOR //
         //paginator.active.page = 1 
@@ -81,13 +82,14 @@ class IndexController extends BaseSiteController
         foreach ( $paginator as $anuncio) {
             //$anuncio['serviceicons'] = $services[$anuncio['id']];
             //$anuncio['messageicons'] = $messages[$anuncio['id']];
+            $anuncio['thumbailpics'] = isset($pics[$anuncio['id']])?$pics[$anuncio['id']]:[];
             $adsList .= $this->view->partial('partials/paginator/item.phtml', $anuncio);
         }
-        $adsList = $adsList . $paginator   ;
+        $adsList = $adsList . $paginator;
 
         $this->view->content = $adsList;
 
-/**********************************************************************************************************/       
+/*******************************************************************************/       
         $this->view->section1 = isset($sections['0']['seccion'])?$sections['0']['seccion']:'';
         $this->view->section2 = isset($sections['1']['seccion'])?$sections['1']['seccion']:'';
         $this->view->section3 = isset($sections['2']['seccion'])?$sections['2']['seccion']:'';
@@ -95,7 +97,7 @@ class IndexController extends BaseSiteController
         $this->view->place2 = isset($places['1']['place'])?$places['1']['place']:'';
         $this->view->place3 = isset($places['2']['place'])?$places['2']['place']:'';
         $this->view->place4 = isset($places['3']['place'])?$places['3']['place']:'';
-      
+
         $this->view->nombre = (string)$sections['0']['nombre'];
 
         $this->view->sections = $sections;

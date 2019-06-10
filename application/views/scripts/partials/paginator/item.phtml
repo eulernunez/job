@@ -1,3 +1,11 @@
+<style>
+    .item-thumbnail-home {
+        height: 40px;
+        width: 50px;
+        float: left;
+        margin-left: 3px;
+    }
+</style>
 <?php 
     if(APPLICATION_ENV=='development') {
         $baseUrl = $this->baseUrl();
@@ -22,16 +30,18 @@
                     
                     <div class="col-md-9 col-sm-9 col-xs-12 room_desc">
                         
-                        <h3><a title="<?= $ad['titulo_enlace']; ?>"  href="<?= $baseUrl . '/hotel/' . $ad["url"]; ?>"> <?= $this->titulo_anuncio; ?> </a></h3>
+                        <h3><a title="<?= $this->titulo_enlace; ?>"  href="<?= $baseUrl . '/hotel/' . $this->url; ?>"> <?= $this->titulo_empleo; ?> </a></h3>
                         <p>
-                            <a title="<?= $this->titulo_enlace; ?>"  href="<?= $baseUrl . '/hotel/' . $ad["url"]; ?>"> <?= $this->localidad . ' - ' . $this->provincia; ?> </a>
+                            <a title="<?= $this->titulo_enlace; ?>"  href="<?= $baseUrl . '/hotel/' . $this->url; ?>"> <?= $this->localidad . ' - ' . $this->provincia; ?> </a>
                         </p>
                         <p>
-                            <?= Application_Model_System_Util::myTruncate($this->contenido_seo, 140, " ", " ... ");  ?>
-                            <a title="<?= $ad['titulo_enlace']; ?>"  href="<?= $baseUrl . '/hotel/' . $ad["url"]; ?>"> ¡Leer más! </a>
+                        
+                                <?= Application_Model_System_Util::myTruncate($this->contenido_seo, 140, " ", " ... ");  ?>
+                           
+                            <a title="<?= $this->titulo_enlace; ?>"  href="<?= $baseUrl . '/hotel/' . $this->url; ?>"> ¡Leer más! </a>
                         </p>
                         <div>
-                            <a title="<?= $ad['titulo_enlace']; ?>" href="<?= $baseUrl . '/hotel/' . $ad["url"]; ?>" class="button  btn_blue upper" style="width:96%;">
+                            <a title="<?= $this->titulo_enlace; ?>" href="<?= $baseUrl . '/hotel/' . $this->url; ?>" class="button  btn_blue upper" style="width:96%;">
                                 <?= '¡'. $this->titulo_oferta . '!'; ?>
                             </a>
                         </div>
@@ -48,19 +58,40 @@
                             <?php endforeach; ?>
                         </div>
                         <?php endif; ?>
-                    </div>
 
+                    </div>
                     <div class="col-md-3 col-sm-3 col-xs-12 room_price">
                         <div class="room_price_inner">
-                        <span class="room_price_number"> €<?= number_format($this->precio,0); ?> </span>
-                        <small class="upper"> por noche </small>
-                        <a href="<?= $baseUrl . '/booking-form/' . $this->url; ?>" class="button  btn_blue btn_full upper">Reservar!</a>
+                        <span class="room_price_number">  </span>
+                        <a title="<?= $this->titulo_enlace; ?>"  href="<?= $baseUrl . '/hotel/' . $this->url; ?>">
+                            <small class="upper"> Interesados </small>
+                        </a>
+                        <a title="<?= $this->titulo_enlace; ?>" href="<?= $baseUrl . '/hotel/' . $this->url; ?>" class="button  btn_blue btn_full upper">¡Aplicar!</a>
                         </div>
                     </div>
                     
                 </div>
             </div>
+            
+            <div class="col-lg-12 col-md-12 col-sm-24">
+                <!-- Item #1 --> 
+<!--                <div class="item-thumbnail-home">
+                    <a title="<?= $this->titulo_enlace; ?>" href="<?= $baseUrl; ?>">    
+                        <img class="img-responsive" 
+                             src="<?php //echo $this->baseUrl( ) . '/ads/empleos/58/36/home-thumbnail/single-room27.jpg';?>" alt="Image" height="4" width="5">
+                    </a>
+                </div>-->
+                <?php if(count($this->thumbailpics)>0): ?>
+                <?php foreach($this->thumbailpics as $pic): ?>
+                <div class="item-thumbnail-home">
+                    <a title="<?= $this->titulo_enlace; ?>" href="<?= $baseUrl . '/hotel/' . $this->url; ?>">    
+                        <img class="img-responsive" 
+                             src="<?php echo $this->baseUrl( ) . '/ads/empleos/58/' . $pic['empleo_id']  . '/home-thumbnail/' . $pic['file_name'];?>" alt="Image" height="4" width="5">
+                    </a>
+                </div>
+                <?php endforeach; ?>
+                <?php endif; ?>
+            </div>
          </div>
     </article>
 <?php //endforeach; ?>
-      

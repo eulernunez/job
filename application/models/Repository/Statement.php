@@ -122,6 +122,26 @@ class Application_Model_Repository_Statement
 
     }
 
+    public function fechThumbailPics(){
+        $query = "SELECT * FROM empleo_pics WHERE section_id=3";
+        
+        $stmt = $this->system->getDbObject()->query($query);
+        
+        $pics = $stmt->fetchAll();
+       
+        $result = array();
+        foreach($pics as $key => $value) {
+            $result[$value['empleo_id']][] = $value;
+        }
+        
+        
+        return $result;
+        
+        
+    }
+    
+    
+    
     
     public function fetchAllHotelesWithOutState()
     {

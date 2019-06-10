@@ -9,7 +9,7 @@
         margin-right: 84px;
     }
 
-    #queue1, #queue2, #queue3  {
+    #queue4, #queue2, #queue3  {
         border: 1px solid #E5E5E5;
         height: 177px;
         overflow: auto;
@@ -56,10 +56,24 @@
         <br/>
     </div>
 
+    <div style="clear: both;"></div>
+    <div style="margin-top: 20px;">
+        <form>
+            <div id="queue4"></div>
+            <input id="file_upload_gallery2" name="file_upload_gallery2" type="file" multiple="true">
+            <input class="uploadifive-button" style="width: 120px; padding:8px;" type="button" onclick="$('#file_upload_gallery2').uploadifive('upload');" value="Upload Files">
+        </form>
+        <br/>
+    </div>
+    
+    
+    
+    
     <script type="text/javascript">
 
         <?php $timestamp2 = time();?>
         <?php $timestamp3 = time();?>
+        <?php $timestamp4 = time();?>
 
         $(function() {
 
@@ -90,6 +104,23 @@
                     'uploadScript'     : '<?php echo $this->baseUrl() . "/empleo/execute-empleo-upload-gallery-pics";?>',
                     'onUploadComplete' : function(file, data) { console.log(data); }
                 });
+
+                $('#file_upload_gallery2').uploadifive({
+                    'auto'             : false,
+                    'buttonText'       : 'Galeria home (18 : [90x70])',
+                //  'checkScript'      : 'check-exists.php',
+                    'width'            : 200,
+                    'formData'         : {
+                                            'timestamp' : '<?php echo $timestamp4;?>',
+                                            'token'     : '<?php echo md5('unique_salt' . $timestamp4);?>'
+                                             },
+                    'queueID'          : 'queue4',
+                    'uploadScript'     : '<?php echo $this->baseUrl() . "/empleo/execute-empleo-upload-home-gallery-pics";?>',
+                    'onUploadComplete' : function(file, data) { console.log(data); }
+                });
+
+
+
 
          });
 
